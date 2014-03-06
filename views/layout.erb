@@ -22,11 +22,11 @@
 
 
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
+   <!-- <script type="text/javascript">
       google.load("visualization", "1", {packages: ["corechart"]});
-     </script>
+     </script>-->
     <%= yield_content :head %>
-    <%= erb :google_analytics if production? %>
+    <%=# erb :google_analytics if production? %>
    
   </head>
   <body>
