@@ -29,7 +29,7 @@ namespace :fezzik do
     puts "bundle install"
     run "cd #{release_path} && bundle install"
     puts "running migrations"
-    run "cd #{release_path} && ./script/run_migrations.rb"
+    #run "cd #{release_path} && ./script/run_migrations.rb"
     puts "finished migrations"
     Rake::Task["fezzik:generate_upstart_scripts"].invoke
   end
