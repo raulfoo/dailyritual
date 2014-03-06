@@ -1,0 +1,3383 @@
+[
+  {
+    "Name":"W.H. Auden",
+    "Category":"Poet",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":12
+  },
+  {
+    "Name":"W.H. Auden",
+    "Category":"Poet",
+    "Activity":"Working",
+    "StartGMT":13,
+    "StopGMT":16
+  },
+  {
+    "Name":"W.H. Auden",
+    "Category":"Poet",
+    "Activity":"Drinking",
+    "StartGMT":18.5,
+    "StopGMT":22
+  },
+  {
+    "Name":"W.H. Auden",
+    "Category":"Poet",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":7
+  },
+  {
+    "Name":"Francis Bacon",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":12
+  },
+  {
+    "Name":"Francis Bacon",
+    "Category":"Artist",
+    "Activity":"Drinking",
+    "StartGMT":14,
+    "StopGMT":2
+  },
+  {
+    "Name":"Francis Bacon",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":2,
+    "StopGMT":6
+  },
+  {
+    "Name":"Simone de Beauvoir",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":13
+  },
+  {
+    "Name":"Simone de Beauvoir",
+    "Category":"Philosopher",
+    "Activity":"Visiting",
+    "StartGMT":13,
+    "StopGMT":18
+  },
+  {
+    "Name":"Simone de Beauvoir",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":18,
+    "StopGMT":21
+  },
+  {
+    "Name":"Simone de Beauvoir",
+    "Category":"Philosopher",
+    "Activity":"Social Events",
+    "StartGMT":21,
+    "StopGMT":23
+  },
+  {
+    "Name":"Simone de Beauvoir",
+    "Category":"Philosopher",
+    "Activity":"Sleeping",
+    "StartGMT":24,
+    "StopGMT":9
+  },
+  {
+    "Name":"Thomas Wolfe",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":24,
+    "StopGMT":6
+  },
+  {
+    "Name":"Thomas Wolfe",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":6,
+    "StopGMT":7
+  },
+  {
+    "Name":"Thomas Wolfe",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":7,
+    "StopGMT":11
+  },
+  {
+    "Name":"Thomas Wolfe",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":1,
+    "StopGMT":4
+  },
+  {
+    "Name":"Patricia Highsmith",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":12
+  },
+  {
+    "Name":"Patricia Highsmith",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":7,
+    "StopGMT":8
+  },
+  {
+    "Name":"Federico Fellini",
+    "Category":"Filmaker",
+    "Activity":"Visiting",
+    "StartGMT":7,
+    "StopGMT":11
+  },
+  {
+    "Name":"Federico Fellini",
+    "Category":"Filmaker",
+    "Activity":"Sleeping",
+    "StartGMT":3,
+    "StopGMT":6
+  },
+  {
+    "Name":"Ingmar Bergman",
+    "Category":"Filmaker",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Ingmar Bergman",
+    "Category":"Filmaker",
+    "Activity":"Working",
+    "StartGMT":13,
+    "StopGMT":15
+  },
+  {
+    "Name":"Ingmar Bergman",
+    "Category":"Filmaker",
+    "Activity":"Sleeping",
+    "StartGMT":15,
+    "StopGMT":16
+  },
+  {
+    "Name":"Ingmar Bergman",
+    "Category":"Filmaker",
+    "Activity":"Walking",
+    "StartGMT":16,
+    "StopGMT":18
+  },
+  {
+    "Name":"Ingmar Bergman",
+    "Category":"Filmaker",
+    "Activity":"Visiting",
+    "StartGMT":18,
+    "StopGMT":22
+  },
+  {
+    "Name":"Ingmar Bergman",
+    "Category":"Filmaker",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":8
+  },
+  {
+    "Name":"Morton Feldman",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":11
+  },
+  {
+    "Name":"Morton Feldman",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":12,
+    "StopGMT":16
+  },
+  {
+    "Name":"Wolfgang Amadeus Mozart",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":9
+  },
+  {
+    "Name":"Wolfgang Amadeus Mozart",
+    "Category":"Composer",
+    "Activity":"Teaching",
+    "StartGMT":9,
+    "StopGMT":13
+  },
+  {
+    "Name":"Wolfgang Amadeus Mozart",
+    "Category":"Composer",
+    "Activity":"Visiting",
+    "StartGMT":13,
+    "StopGMT":17
+  },
+  {
+    "Name":"Wolfgang Amadeus Mozart",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":17,
+    "StopGMT":21
+  },
+  {
+    "Name":"Wolfgang Amadeus Mozart",
+    "Category":"Composer",
+    "Activity":"Visiting",
+    "StartGMT":21,
+    "StopGMT":23
+  },
+  {
+    "Name":"Wolfgang Amadeus Mozart",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":23,
+    "StopGMT":1
+  },
+  {
+    "Name":"Wolfgang Amadeus Mozart",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":1,
+    "StopGMT":6
+  },
+  {
+    "Name":"Ludwig van Beethoven",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":15
+  },
+  {
+    "Name":"Ludwig van Beethoven",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":15,
+    "StopGMT":18
+  },
+  {
+    "Name":"Ludwig van Beethoven",
+    "Category":"Composer",
+    "Activity":"Visiting",
+    "StartGMT":18,
+    "StopGMT":21
+  },
+  {
+    "Name":"Ludwig van Beethoven",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Soren Kierkegaard",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":12
+  },
+  {
+    "Name":"Soren Kierkegaard",
+    "Category":"Philosopher",
+    "Activity":"Walking",
+    "StartGMT":12,
+    "StopGMT":17
+  },
+  {
+    "Name":"Soren Kierkegaard",
+    "Category":"Philosopher",
+    "Activity":"Drinking",
+    "StartGMT":17,
+    "StopGMT":18
+  },
+  {
+    "Name":"Soren Kierkegaard",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":18,
+    "StopGMT":22
+  },
+  {
+    "Name":"Soren Kierkegaard",
+    "Category":"Philosopher",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":6
+  },
+  {
+    "Name":"Voltaire",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":14
+  },
+  {
+    "Name":"Voltaire",
+    "Category":"Philosopher",
+    "Activity":"Visiting",
+    "StartGMT":14,
+    "StopGMT":16
+  },
+  {
+    "Name":"Voltaire",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":16,
+    "StopGMT":20
+  },
+  {
+    "Name":"Voltaire",
+    "Category":"Philosopher",
+    "Activity":"Visiting",
+    "StartGMT":20,
+    "StopGMT":21
+  },
+  {
+    "Name":"Voltaire",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":21,
+    "StopGMT":1
+  },
+  {
+    "Name":"Voltaire",
+    "Category":"Philosopher",
+    "Activity":"Sleeping",
+    "StartGMT":1,
+    "StopGMT":6
+  },
+  {
+    "Name":"Benjamin Franklin",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":4
+  },
+  {
+    "Name":"Benjamin Franklin",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":17
+  },
+  {
+    "Name":"Benjamin Franklin",
+    "Category":"Scientist",
+    "Activity":"Visiting",
+    "StartGMT":17,
+    "StopGMT":21
+  },
+  {
+    "Name":"Anthony Trollope",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":9
+  },
+  {
+    "Name":"Jane Austen",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":14
+  },
+  {
+    "Name":"Jane Austen",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":15,
+    "StopGMT":21
+  },
+  {
+    "Name":"Frederic Chopin",
+    "Category":"Composer",
+    "Activity":"Teaching",
+    "StartGMT":13,
+    "StopGMT":14
+  },
+  {
+    "Name":"Frederic Chopin",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":12,
+    "StopGMT":17
+  },
+  {
+    "Name":"Frederic Chopin",
+    "Category":"Composer",
+    "Activity":"Visiting",
+    "StartGMT":18,
+    "StopGMT":21
+  },
+  {
+    "Name":"Gustave Flaubert",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":12,
+    "StopGMT":13
+  },
+  {
+    "Name":"Gustave Flaubert",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":22,
+    "StopGMT":2
+  },
+  {
+    "Name":"Gustave Flaubert",
+    "Category":"Writer",
+    "Activity":"Teaching",
+    "StartGMT":14,
+    "StopGMT":17
+  },
+  {
+    "Name":"Gustave Flaubert",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":2,
+    "StopGMT":10
+  },
+  {
+    "Name":"Henri de Toulouse-Lautrec",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":11
+  },
+  {
+    "Name":"Henri de Toulouse-Lautrec",
+    "Category":"Artist",
+    "Activity":"Drinking",
+    "StartGMT":11,
+    "StopGMT":13
+  },
+  {
+    "Name":"Henri de Toulouse-Lautrec",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":13,
+    "StopGMT":15
+  },
+  {
+    "Name":"Henri de Toulouse-Lautrec",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":15,
+    "StopGMT":18
+  },
+  {
+    "Name":"Henri de Toulouse-Lautrec",
+    "Category":"Artist",
+    "Activity":"Drinking",
+    "StartGMT":18,
+    "StopGMT":2
+  },
+  {
+    "Name":"Henri de Toulouse-Lautrec",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":23,
+    "StopGMT":1
+  },
+  {
+    "Name":"Henri de Toulouse-Lautrec",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":3,
+    "StopGMT":8
+  },
+  {
+    "Name":"Thomas Mann",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":12,
+    "StopGMT":8
+  },
+  {
+    "Name":"Thomas Mann",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Thomas Mann",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":17,
+    "StopGMT":19
+  },
+  {
+    "Name":"Thomas Mann",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":16,
+    "StopGMT":17
+  },
+  {
+    "Name":"Thomas Mann",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":19,
+    "StopGMT":20
+  },
+  {
+    "Name":"Karl Marx",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":19
+  },
+  {
+    "Name":"Karl Marx",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":21,
+    "StopGMT":23
+  },
+  {
+    "Name":"Karl Marx",
+    "Category":"Philosopher",
+    "Activity":"Sleeping",
+    "StartGMT":24,
+    "StopGMT":7
+  },
+  {
+    "Name":"Sigmund Freud",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":12
+  },
+  {
+    "Name":"Sigmund Freud",
+    "Category":"Scientist",
+    "Activity":"Walking",
+    "StartGMT":14,
+    "StopGMT":15
+  },
+  {
+    "Name":"Sigmund Freud",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":15,
+    "StopGMT":21
+  },
+  {
+    "Name":"Sigmund Freud",
+    "Category":"Scientist",
+    "Activity":"Walking",
+    "StartGMT":21,
+    "StopGMT":22
+  },
+  {
+    "Name":"Sigmund Freud",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":22,
+    "StopGMT":1
+  },
+  {
+    "Name":"Sigmund Freud",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":1,
+    "StopGMT":7
+  },
+  {
+    "Name":"Carl Jung",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":12
+  },
+  {
+    "Name":"Carl Jung",
+    "Category":"Scientist",
+    "Activity":"Walking",
+    "StartGMT":12,
+    "StopGMT":15
+  },
+  {
+    "Name":"Carl Jung",
+    "Category":"Scientist",
+    "Activity":"Visiting",
+    "StartGMT":15,
+    "StopGMT":18
+  },
+  {
+    "Name":"Carl Jung",
+    "Category":"Scientist",
+    "Activity":"Drinking",
+    "StartGMT":18,
+    "StopGMT":20
+  },
+  {
+    "Name":"Carl Jung",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":7
+  },
+  {
+    "Name":"Gustav Mahler",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":12
+  },
+  {
+    "Name":"Gustav Mahler",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":13,
+    "StopGMT":18
+  },
+  {
+    "Name":"Richard Strauss",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":13
+  },
+  {
+    "Name":"Richard Strauss",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":15,
+    "StopGMT":16
+  },
+  {
+    "Name":"Richard Strauss",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":16,
+    "StopGMT":18
+  },
+  {
+    "Name":"Richard Strauss",
+    "Category":"Composer",
+    "Activity":"Visiting",
+    "StartGMT":19,
+    "StopGMT":21
+  },
+  {
+    "Name":"Richard Strauss",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":8
+  },
+  {
+    "Name":"Henri Mattise",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Henri Mattise",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":13,
+    "StopGMT":14
+  },
+  {
+    "Name":"Henri Mattise",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":20
+  },
+  {
+    "Name":"Joan Miro",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":12
+  },
+  {
+    "Name":"Joan Miro",
+    "Category":"Artist",
+    "Activity":"Walking",
+    "StartGMT":12,
+    "StopGMT":13
+  },
+  {
+    "Name":"Joan Miro",
+    "Category":"Artist",
+    "Activity":"Visiting",
+    "StartGMT":14,
+    "StopGMT":15
+  },
+  {
+    "Name":"Joan Miro",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":15,
+    "StopGMT":20
+  },
+  {
+    "Name":"Joan Miro",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Gertrude Stein",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":1,
+    "StopGMT":10
+  },
+  {
+    "Name":"Gertrude Stein",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":15
+  },
+  {
+    "Name":"Gertrude Stein",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":20,
+    "StopGMT":1
+  },
+  {
+    "Name":"Ernest Hemingway",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":12
+  },
+  {
+    "Name":"Ernest Hemingway",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":20,
+    "StopGMT":12
+  },
+  {
+    "Name":"Ernest Hemingway",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":12,
+    "StopGMT":6
+  },
+  {
+    "Name":"Henry Miller",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":12
+  },
+  {
+    "Name":"Henry Miller",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":13,
+    "StopGMT":14
+  },
+  {
+    "Name":"Henry Miller",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":18
+  },
+  {
+    "Name":"F Scott Fitzgerald",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":17,
+    "StopGMT":3
+  },
+  {
+    "Name":"F Scott Fitzgerald",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":17,
+    "StopGMT":3
+  },
+  {
+    "Name":"F Scott Fitzgerald",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":3,
+    "StopGMT":11
+  },
+  {
+    "Name":"William Faulkner",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":12
+  },
+  {
+    "Name":"William Faulkner",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":13,
+    "StopGMT":18
+  },
+  {
+    "Name":"William Faulkner",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":19,
+    "StopGMT":21
+  },
+  {
+    "Name":"William Faulkner",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Benjamin Britten",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Benjamin Britten",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":15,
+    "StopGMT":20
+  },
+  {
+    "Name":"Benjamin Britten",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":12,
+    "StopGMT":15
+  },
+  {
+    "Name":"Benjamin Britten",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":21,
+    "StopGMT":6
+  },
+  {
+    "Name":"Ann Beattie",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":21,
+    "StopGMT":3
+  },
+  {
+    "Name":"Gunter Grass",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":13
+  },
+  {
+    "Name":"Gunter Grass",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":19
+  },
+  {
+    "Name":"Tom Stoppard",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":20,
+    "StopGMT":5
+  },
+  {
+    "Name":"Tom Stoppard",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":7,
+    "StopGMT":13
+  },
+  {
+    "Name":"Haruki Murakami",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":4,
+    "StopGMT":9
+  },
+  {
+    "Name":"Haruki Murakami",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":13,
+    "StopGMT":18
+  },
+  {
+    "Name":"Haruki Murakami",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":21,
+    "StopGMT":4
+  },
+  {
+    "Name":"Toni Morrison",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":5,
+    "StopGMT":17
+  },
+  {
+    "Name":"Joyce Carol Oates",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":13
+  },
+  {
+    "Name":"Joyce Carol Oates",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":16,
+    "StopGMT":19
+  },
+  {
+    "Name":"Joyce Carol Oates",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":7
+  },
+  {
+    "Name":"Chuck Close",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Chuck Close",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":15,
+    "StopGMT":18
+  },
+  {
+    "Name":"Chuck Close",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":15,
+    "StopGMT":18
+  },
+  {
+    "Name":"Francine Prose",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":15
+  },
+  {
+    "Name":"Francine Prose",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":16,
+    "StopGMT":18
+  },
+  {
+    "Name":"John Adams",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":16
+  },
+  {
+    "Name":"John Adams",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":7
+  },
+  {
+    "Name":"Steve Reich",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":8,
+    "StopGMT":10
+  },
+  {
+    "Name":"Steve Reich",
+    "Category":"Composer",
+    "Activity":"Visiting",
+    "StartGMT":10,
+    "StopGMT":12
+  },
+  {
+    "Name":"Steve Reich",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":12,
+    "StopGMT":24
+  },
+  {
+    "Name":"Steve Reich",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":24,
+    "StopGMT":8
+  },
+  {
+    "Name":"Nicholson Baker",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":4,
+    "StopGMT":6
+  },
+  {
+    "Name":"Nicholson Baker",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":6,
+    "StopGMT":8
+  },
+  {
+    "Name":"Nicholson Baker",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":21,
+    "StopGMT":4
+  },
+  {
+    "Name":"Nicholson Baker",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":18
+  },
+  {
+    "Name":"Nicholson Baker",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":14,
+    "StopGMT":15
+  },
+  {
+    "Name":"BF Skinner",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":13
+  },
+  {
+    "Name":"BF Skinner",
+    "Category":"Scientist",
+    "Activity":"Walking",
+    "StartGMT":13,
+    "StopGMT":16
+  },
+  {
+    "Name":"BF Skinner",
+    "Category":"Scientist",
+    "Activity":"Visiting",
+    "StartGMT":17,
+    "StopGMT":20
+  },
+  {
+    "Name":"BF Skinner",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":5,
+    "StopGMT":7
+  },
+  {
+    "Name":"BF Skinner",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":24,
+    "StopGMT":1
+  },
+  {
+    "Name":"BF Skinner",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":24
+  },
+  {
+    "Name":"BF Skinner",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":1,
+    "StopGMT":5
+  },
+  {
+    "Name":"BF Skinner",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":7,
+    "StopGMT":9
+  },
+  {
+    "Name":"Margaret Mead",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":5,
+    "StopGMT":16
+  },
+  {
+    "Name":"Jonathan Edwards",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":4,
+    "StopGMT":17
+  },
+  {
+    "Name":"Jonathan Edwards",
+    "Category":"Scientist",
+    "Activity":"Walking",
+    "StartGMT":13,
+    "StopGMT":15
+  },
+  {
+    "Name":"Jonathan Edwards",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":20,
+    "StopGMT":4
+  },
+  {
+    "Name":"Samuel Johnson",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":2,
+    "StopGMT":6
+  },
+  {
+    "Name":"Samuel Johnson",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":20,
+    "StopGMT":2
+  },
+  {
+    "Name":"Samuel Johnson",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":13,
+    "StopGMT":2
+  },
+  {
+    "Name":"Samuel Johnson",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":6,
+    "StopGMT":12
+  },
+  {
+    "Name":"James Boswell",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":12
+  },
+  {
+    "Name":"Immanuel Kant",
+    "Category":"Philosopher",
+    "Activity":"Teaching",
+    "StartGMT":7,
+    "StopGMT":11
+  },
+  {
+    "Name":"Immanuel Kant",
+    "Category":"Philosopher",
+    "Activity":"Walking",
+    "StartGMT":15,
+    "StopGMT":19
+  },
+  {
+    "Name":"Immanuel Kant",
+    "Category":"Philosopher",
+    "Activity":"Visiting",
+    "StartGMT":18,
+    "StopGMT":20
+  },
+  {
+    "Name":"Immanuel Kant",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":20,
+    "StopGMT":22
+  },
+  {
+    "Name":"Immanuel Kant",
+    "Category":"Philosopher",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":7
+  },
+  {
+    "Name":"William James",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":14,
+    "StopGMT":15
+  },
+  {
+    "Name":"William James",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":12,
+    "StopGMT":8
+  },
+  {
+    "Name":"William James",
+    "Category":"Scientist",
+    "Activity":"Drinking",
+    "StartGMT":18,
+    "StopGMT":19
+  },
+  {
+    "Name":"Henry James",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Henry James",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":14,
+    "StopGMT":17
+  },
+  {
+    "Name":"Franz Kafka",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":16,
+    "StopGMT":20
+  },
+  {
+    "Name":"Franz Kafka",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":20,
+    "StopGMT":21
+  },
+  {
+    "Name":"Franz Kafka",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":23,
+    "StopGMT":3
+  },
+  {
+    "Name":"Franz Kafka",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":5,
+    "StopGMT":7
+  },
+  {
+    "Name":"James Joyce",
+    "Category":"Writer",
+    "Activity":"Teaching",
+    "StartGMT":14,
+    "StopGMT":19
+  },
+  {
+    "Name":"James Joyce",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":19
+  },
+  {
+    "Name":"James Joyce",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":1,
+    "StopGMT":10
+  },
+  {
+    "Name":"James Joyce",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":21,
+    "StopGMT":1
+  },
+  {
+    "Name":"Marcel Proust",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":8,
+    "StopGMT":18
+  },
+  {
+    "Name":"Marcel Proust",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":18,
+    "StopGMT":21
+  },
+  {
+    "Name":"Marcel Proust",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Samuel Becket",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":13,
+    "StopGMT":20
+  },
+  {
+    "Name":"Samuel Becket",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":22,
+    "StopGMT":5
+  },
+  {
+    "Name":"Samuel Becket",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":5,
+    "StopGMT":13
+  },
+  {
+    "Name":"Igor Stravinsky",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":13
+  },
+  {
+    "Name":"Erik Satie",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":8,
+    "StopGMT":12
+  },
+  {
+    "Name":"Erik Satie",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":13,
+    "StopGMT":17
+  },
+  {
+    "Name":"Erik Satie",
+    "Category":"Composer",
+    "Activity":"Drinking",
+    "StartGMT":22,
+    "StopGMT":1
+  },
+  {
+    "Name":"Erik Satie",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":1,
+    "StopGMT":4
+  },
+  {
+    "Name":"Erik Satie",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":4,
+    "StopGMT":8
+  },
+  {
+    "Name":"Pablo Picasso",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":18
+  },
+  {
+    "Name":"Pablo Picasso",
+    "Category":"Artist",
+    "Activity":"Visiting",
+    "StartGMT":19,
+    "StopGMT":21
+  },
+  {
+    "Name":"Pablo Picasso",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":3,
+    "StopGMT":11
+  },
+  {
+    "Name":"Jean-Paul Sartre",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Jean-Paul Sartre",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":15,
+    "StopGMT":18
+  },
+  {
+    "Name":"Jean-Paul Sartre",
+    "Category":"Philosopher",
+    "Activity":"Drinking",
+    "StartGMT":13,
+    "StopGMT":15
+  },
+  {
+    "Name":"Jean-Paul Sartre",
+    "Category":"Philosopher",
+    "Activity":"Drinking",
+    "StartGMT":20,
+    "StopGMT":24
+  },
+  {
+    "Name":"Jean-Paul Sartre",
+    "Category":"Philosopher",
+    "Activity":"Sleeping",
+    "StartGMT":2,
+    "StopGMT":9
+  },
+  {
+    "Name":"T.S. Elliot",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":17
+  },
+  {
+    "Name":"T.S. Elliot",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":19,
+    "StopGMT":23
+  },
+  {
+    "Name":"T.S. Elliot",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":24,
+    "StopGMT":8
+  },
+  {
+    "Name":"Henry Green",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":10,
+    "StopGMT":14
+  },
+  {
+    "Name":"Henry Green",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":21,
+    "StopGMT":12
+  },
+  {
+    "Name":"Henry Green",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":12,
+    "StopGMT":8
+  },
+  {
+    "Name":"Somerset Maugham",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":12
+  },
+  {
+    "Name":"Graham Greene",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Graham Greene",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":19
+  },
+  {
+    "Name":"Joseph Cornell",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":22,
+    "StopGMT":4
+  },
+  {
+    "Name":"Joseph Cornell",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":17
+  },
+  {
+    "Name":"Joseph Cornell",
+    "Category":"Artist",
+    "Activity":"Visiting",
+    "StartGMT":17,
+    "StopGMT":19
+  },
+  {
+    "Name":"Sylvia Plath",
+    "Category":"Poet",
+    "Activity":"Working",
+    "StartGMT":5,
+    "StopGMT":8
+  },
+  {
+    "Name":"John Cheever",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"John Cheever",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":12,
+    "StopGMT":21
+  },
+  {
+    "Name":"John Cheever",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":14,
+    "StopGMT":17
+  },
+  {
+    "Name":"W.B. Yeats",
+    "Category":"Poet",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":15
+  },
+  {
+    "Name":"W.B. Yeats",
+    "Category":"Poet",
+    "Activity":"Walking",
+    "StartGMT":15,
+    "StopGMT":17
+  },
+  {
+    "Name":"W.B. Yeats",
+    "Category":"Poet",
+    "Activity":"Working",
+    "StartGMT":17,
+    "StopGMT":19
+  },
+  {
+    "Name":"W.B. Yeats",
+    "Category":"Poet",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":9
+  },
+  {
+    "Name":"Wallace Stevens",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":8,
+    "StopGMT":9
+  },
+  {
+    "Name":"Wallace Stevens",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":16,
+    "StopGMT":18
+  },
+  {
+    "Name":"Wallace Stevens",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":16
+  },
+  {
+    "Name":"Wallace Stevens",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Kingsley Amis",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":12
+  },
+  {
+    "Name":"Kingsley Amis",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":12,
+    "StopGMT":15
+  },
+  {
+    "Name":"Kingsley Amis",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":15,
+    "StopGMT":17
+  },
+  {
+    "Name":"Kingsley Amis",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":17,
+    "StopGMT":19
+  },
+  {
+    "Name":"Kingsley Amis",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":17,
+    "StopGMT":19
+  },
+  {
+    "Name":"Martin Amis",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":11,
+    "StopGMT":13
+  },
+  {
+    "Name":"Umberto Eco",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":23,
+    "StopGMT":2
+  },
+  {
+    "Name":"Umberto Eco",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":13,
+    "StopGMT":14
+  },
+  {
+    "Name":"Umberto Eco",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":13
+  },
+  {
+    "Name":"Umberto Eco",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":2,
+    "StopGMT":9
+  },
+  {
+    "Name":"David Lynch",
+    "Category":"Filmaker",
+    "Activity":"Working",
+    "StartGMT":15,
+    "StopGMT":21
+  },
+  {
+    "Name":"Maya Angelou",
+    "Category":"Poet",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":14
+  },
+  {
+    "Name":"Maya Angelou",
+    "Category":"Poet",
+    "Activity":"Drinking",
+    "StartGMT":18,
+    "StopGMT":19
+  },
+  {
+    "Name":"Maya Angelou",
+    "Category":"Poet",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":5
+  },
+  {
+    "Name":"George Balanchine",
+    "Category":"Artist",
+    "Activity":"Teaching",
+    "StartGMT":11,
+    "StopGMT":13
+  },
+  {
+    "Name":"George Balanchine",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":13,
+    "StopGMT":16
+  },
+  {
+    "Name":"George Balanchine",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Al Hirschfield",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":16
+  },
+  {
+    "Name":"Al Hirschfield",
+    "Category":"Artist",
+    "Activity":"Social Events",
+    "StartGMT":20,
+    "StopGMT":24
+  },
+  {
+    "Name":"Al Hirschfield",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":2,
+    "StopGMT":8
+  },
+  {
+    "Name":"Truman Capote",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":12,
+    "StopGMT":16
+  },
+  {
+    "Name":"Truman Capote",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":16,
+    "StopGMT":19
+  },
+  {
+    "Name":"Richard Wright",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":10
+  },
+  {
+    "Name":"Richard Wright",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":12,
+    "StopGMT":17
+  },
+  {
+    "Name":"Richard Wright",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":6
+  },
+  {
+    "Name":"H.L. Mencken",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"H.L. Mencken",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":13,
+    "StopGMT":14
+  },
+  {
+    "Name":"H.L. Mencken",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":19
+  },
+  {
+    "Name":"H.L. Mencken",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":18,
+    "StopGMT":23
+  },
+  {
+    "Name":"H.L. Mencken",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":18,
+    "StopGMT":23
+  },
+  {
+    "Name":"H.L. Mencken",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":7
+  },
+  {
+    "Name":"Philip Larkin",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":17
+  },
+  {
+    "Name":"Philip Larkin",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":20,
+    "StopGMT":23
+  },
+  {
+    "Name":"Philip Larkin",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":7
+  },
+  {
+    "Name":"Frank Lloyd Wright",
+    "Category":"Architect",
+    "Activity":"Working",
+    "StartGMT":4,
+    "StopGMT":7
+  },
+  {
+    "Name":"Frank Lloyd Wright",
+    "Category":"Architect",
+    "Activity":"Sleeping",
+    "StartGMT":7,
+    "StopGMT":9
+  },
+  {
+    "Name":"Frank Lloyd Wright",
+    "Category":"Architect",
+    "Activity":"Sleeping",
+    "StartGMT":14,
+    "StopGMT":15
+  },
+  {
+    "Name":"Frank Lloyd Wright",
+    "Category":"Architect",
+    "Activity":"Teaching",
+    "StartGMT":15,
+    "StopGMT":18
+  },
+  {
+    "Name":"Frank Lloyd Wright",
+    "Category":"Architect",
+    "Activity":"Teaching",
+    "StartGMT":12,
+    "StopGMT":14
+  },
+  {
+    "Name":"Louis Khan",
+    "Category":"Architect",
+    "Activity":"Teaching",
+    "StartGMT":10,
+    "StopGMT":15
+  },
+  {
+    "Name":"Louis Khan",
+    "Category":"Architect",
+    "Activity":"Working",
+    "StartGMT":22,
+    "StopGMT":2
+  },
+  {
+    "Name":"Louis Khan",
+    "Category":"Architect",
+    "Activity":"Sleeping",
+    "StartGMT":2,
+    "StopGMT":6
+  },
+  {
+    "Name":"George Gershwin",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":11,
+    "StopGMT":1
+  },
+  {
+    "Name":"George Gershwin",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":16,
+    "StopGMT":17
+  },
+  {
+    "Name":"George Gershwin",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":1,
+    "StopGMT":9
+  },
+  {
+    "Name":"Joseph Heller",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":21,
+    "StopGMT":24
+  },
+  {
+    "Name":"Joseph Heller",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":17
+  },
+  {
+    "Name":"Joseph Heller",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":24,
+    "StopGMT":8
+  },
+  {
+    "Name":"James Dickey",
+    "Category":"Poet",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":18
+  },
+  {
+    "Name":"Nikola Tesla",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":11,
+    "StopGMT":3
+  },
+  {
+    "Name":"Nikola Tesla",
+    "Category":"Scientist",
+    "Activity":"Visiting",
+    "StartGMT":20,
+    "StopGMT":21
+  },
+  {
+    "Name":"Nikola Tesla",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":4,
+    "StopGMT":10
+  },
+  {
+    "Name":"Glenn Gould",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":19,
+    "StopGMT":2
+  },
+  {
+    "Name":"Glenn Gould",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":6,
+    "StopGMT":15
+  },
+  {
+    "Name":"Glenn Gould",
+    "Category":"Composer",
+    "Activity":"Visiting",
+    "StartGMT":2,
+    "StopGMT":5
+  },
+  {
+    "Name":"Flannery O'Connor",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Flannery O'Connor",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":13,
+    "StopGMT":16
+  },
+  {
+    "Name":"Flannery O'Connor",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":21,
+    "StopGMT":6
+  },
+  {
+    "Name":"William Styron",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":16,
+    "StopGMT":20
+  },
+  {
+    "Name":"William Styron",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":22,
+    "StopGMT":2
+  },
+  {
+    "Name":"William Styron",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":20,
+    "StopGMT":22
+  },
+  {
+    "Name":"William Styron",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":2,
+    "StopGMT":12
+  },
+  {
+    "Name":"Philip Roth",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":18
+  },
+  {
+    "Name":"Philip Roth",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":7
+  },
+  {
+    "Name":"PG Wodehouse",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":7
+  },
+  {
+    "Name":"PG Wodehouse",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":14
+  },
+  {
+    "Name":"PG Wodehouse",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":14,
+    "StopGMT":15
+  },
+  {
+    "Name":"PG Wodehouse",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":15,
+    "StopGMT":17
+  },
+  {
+    "Name":"PG Wodehouse",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":18,
+    "StopGMT":19
+  },
+  {
+    "Name":"Edith Sitwell",
+    "Category":"Poet",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":13
+  },
+  {
+    "Name":"Thomas Hobbes",
+    "Category":"Philosopher",
+    "Activity":"Walking",
+    "StartGMT":8,
+    "StopGMT":10
+  },
+  {
+    "Name":"Thomas Hobbes",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":11
+  },
+  {
+    "Name":"Thomas Hobbes",
+    "Category":"Philosopher",
+    "Activity":"Sleeping",
+    "StartGMT":13,
+    "StopGMT":14
+  },
+  {
+    "Name":"Thomas Hobbes",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":17
+  },
+  {
+    "Name":"Thomas Hobbes",
+    "Category":"Philosopher",
+    "Activity":"Visiting",
+    "StartGMT":21,
+    "StopGMT":22
+  },
+  {
+    "Name":"John Milton",
+    "Category":"Poet",
+    "Activity":"Working",
+    "StartGMT":4,
+    "StopGMT":11
+  },
+  {
+    "Name":"John Milton",
+    "Category":"Poet",
+    "Activity":"Walking",
+    "StartGMT":13,
+    "StopGMT":17
+  },
+  {
+    "Name":"John Milton",
+    "Category":"Poet",
+    "Activity":"Sleeping",
+    "StartGMT":21,
+    "StopGMT":4
+  },
+  {
+    "Name":"Renee Descarte",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":11
+  },
+  {
+    "Name":"Renee Descarte",
+    "Category":"Philosopher",
+    "Activity":"Walking",
+    "StartGMT":12,
+    "StopGMT":14
+  },
+  {
+    "Name":"Friedrich Schiller",
+    "Category":"Philosopher",
+    "Activity":"Working",
+    "StartGMT":22,
+    "StopGMT":4
+  },
+  {
+    "Name":"Friedrich Schiller",
+    "Category":"Philosopher",
+    "Activity":"Sleeping",
+    "StartGMT":4,
+    "StopGMT":9
+  },
+  {
+    "Name":"Franz Shubert",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":13
+  },
+  {
+    "Name":"Franz Shubert",
+    "Category":"Composer",
+    "Activity":"Visiting",
+    "StartGMT":14,
+    "StopGMT":16
+  },
+  {
+    "Name":"Franz Shubert",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":16,
+    "StopGMT":19
+  },
+  {
+    "Name":"Franz Shubert",
+    "Category":"Composer",
+    "Activity":"Drinking",
+    "StartGMT":19,
+    "StopGMT":21
+  },
+  {
+    "Name":"Franz Shubert",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Franz List",
+    "Category":"Composer",
+    "Activity":"Visiting",
+    "StartGMT":5,
+    "StopGMT":6
+  },
+  {
+    "Name":"Franz List",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":13
+  },
+  {
+    "Name":"Franz List",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":14,
+    "StopGMT":16
+  },
+  {
+    "Name":"Franz List",
+    "Category":"Composer",
+    "Activity":"Drinking",
+    "StartGMT":16,
+    "StopGMT":22
+  },
+  {
+    "Name":"Franz List",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":5
+  },
+  {
+    "Name":"Honore Balzac",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":19,
+    "StopGMT":1
+  },
+  {
+    "Name":"Honore Balzac",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":1,
+    "StopGMT":7
+  },
+  {
+    "Name":"Honore Balzac",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":9
+  },
+  {
+    "Name":"Honore Balzac",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":16
+  },
+  {
+    "Name":"Honore Balzac",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":16,
+    "StopGMT":18
+  },
+  {
+    "Name":"Victor Hugo",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":11
+  },
+  {
+    "Name":"Victor Hugo",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":12,
+    "StopGMT":14
+  },
+  {
+    "Name":"Victor Hugo",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":14,
+    "StopGMT":17
+  },
+  {
+    "Name":"Victor Hugo",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":17,
+    "StopGMT":19
+  },
+  {
+    "Name":"Victor Hugo",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Charles Dickens",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":14
+  },
+  {
+    "Name":"Charles Dickens",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":14,
+    "StopGMT":17
+  },
+  {
+    "Name":"Charles Dickens",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":19,
+    "StopGMT":24
+  },
+  {
+    "Name":"Charles Dickens",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":24,
+    "StopGMT":7
+  },
+  {
+    "Name":"Charles Darwin",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":12
+  },
+  {
+    "Name":"Charles Darwin",
+    "Category":"Scientist",
+    "Activity":"Walking",
+    "StartGMT":7,
+    "StopGMT":8
+  },
+  {
+    "Name":"Charles Darwin",
+    "Category":"Scientist",
+    "Activity":"Visiting",
+    "StartGMT":13,
+    "StopGMT":15
+  },
+  {
+    "Name":"Charles Darwin",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":15,
+    "StopGMT":16
+  },
+  {
+    "Name":"Charles Darwin",
+    "Category":"Scientist",
+    "Activity":"Walking",
+    "StartGMT":16,
+    "StopGMT":17
+  },
+  {
+    "Name":"Charles Darwin",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Herman Melville",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":8,
+    "StopGMT":9
+  },
+  {
+    "Name":"Herman Melville",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":14
+  },
+  {
+    "Name":"Herman Melville",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":14,
+    "StopGMT":20
+  },
+  {
+    "Name":"Herman Melville",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":7
+  },
+  {
+    "Name":"Nathaniel Hawthorne",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":14
+  },
+  {
+    "Name":"Nathaniel Hawthorne",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":14,
+    "StopGMT":19
+  },
+  {
+    "Name":"Leo Tolstoy",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":16
+  },
+  {
+    "Name":"Leo Tolstoy",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":16,
+    "StopGMT":18
+  },
+  {
+    "Name":"Leo Tolstoy",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":22,
+    "StopGMT":1
+  },
+  {
+    "Name":"Leo Tolstoy",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":1,
+    "StopGMT":9
+  },
+  {
+    "Name":"Pyotr Ilyich Tchaikovsky",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Pyotr Ilyich Tchaikovsky",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":13,
+    "StopGMT":15
+  },
+  {
+    "Name":"Pyotr Ilyich Tchaikovsky",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":17,
+    "StopGMT":19
+  },
+  {
+    "Name":"Pyotr Ilyich Tchaikovsky",
+    "Category":"Composer",
+    "Activity":"Visiting",
+    "StartGMT":20,
+    "StopGMT":22
+  },
+  {
+    "Name":"Pyotr Ilyich Tchaikovsky",
+    "Category":"Composer",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":7
+  },
+  {
+    "Name":"Mark Twain",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":11,
+    "StopGMT":17
+  },
+  {
+    "Name":"Mark Twain",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":21,
+    "StopGMT":23
+  },
+  {
+    "Name":"Mark Twain",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":21,
+    "StopGMT":23
+  },
+  {
+    "Name":"Mark Twain",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":11,
+    "StopGMT":9
+  },
+  {
+    "Name":"Alexander Graham Bell",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":19
+  },
+  {
+    "Name":"Alexander Graham Bell",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":22,
+    "StopGMT":1
+  },
+  {
+    "Name":"Alexander Graham Bell",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":1,
+    "StopGMT":8
+  },
+  {
+    "Name":"Vincent Van Gogh",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":18
+  },
+  {
+    "Name":"Vincent Van Gogh",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":20,
+    "StopGMT":23
+  },
+  {
+    "Name":"N.C. Wyeth",
+    "Category":"Artist",
+    "Activity":"Walking",
+    "StartGMT":5,
+    "StopGMT":7
+  },
+  {
+    "Name":"N.C. Wyeth",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":13
+  },
+  {
+    "Name":"N.C. Wyeth",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":17
+  },
+  {
+    "Name":"Georgia O'Keefe",
+    "Category":"Artist",
+    "Activity":"Walking",
+    "StartGMT":6,
+    "StopGMT":7
+  },
+  {
+    "Name":"Georgia O'Keefe",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":12
+  },
+  {
+    "Name":"Georgia O'Keefe",
+    "Category":"Artist",
+    "Activity":"Visiting",
+    "StartGMT":13,
+    "StopGMT":16
+  },
+  {
+    "Name":"Georgia O'Keefe",
+    "Category":"Artist",
+    "Activity":"Walking",
+    "StartGMT":19,
+    "StopGMT":21
+  },
+  {
+    "Name":"Georgia O'Keefe",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":21,
+    "StopGMT":6
+  },
+  {
+    "Name":"Sergey Rachmaninoff",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Sergey Rachmaninoff",
+    "Category":"Composer",
+    "Activity":"Walking",
+    "StartGMT":14,
+    "StopGMT":15
+  },
+  {
+    "Name":"Sergey Rachmaninoff",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":15,
+    "StopGMT":17
+  },
+  {
+    "Name":"Sergey Rachmaninoff",
+    "Category":"Composer",
+    "Activity":"Working",
+    "StartGMT":21,
+    "StopGMT":6
+  },
+  {
+    "Name":"Vladimir Nabokov",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":12
+  },
+  {
+    "Name":"Vladimir Nabokov",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":12,
+    "StopGMT":13
+  },
+  {
+    "Name":"Vladimir Nabokov",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":13,
+    "StopGMT":18
+  },
+  {
+    "Name":"Vladimir Nabokov",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":1,
+    "StopGMT":7
+  },
+  {
+    "Name":"Balthus",
+    "Category":"Artist",
+    "Activity":"Walking",
+    "StartGMT":10,
+    "StopGMT":12
+  },
+  {
+    "Name":"Balthus",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":12,
+    "StopGMT":16
+  },
+  {
+    "Name":"Le Corbusier",
+    "Category":"Architect",
+    "Activity":"Walking",
+    "StartGMT":6,
+    "StopGMT":7
+  },
+  {
+    "Name":"Le Corbusier",
+    "Category":"Architect",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":12
+  },
+  {
+    "Name":"Le Corbusier",
+    "Category":"Architect",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":17
+  },
+  {
+    "Name":"Buckminster Fuller",
+    "Category":"Architect",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":12
+  },
+  {
+    "Name":"Buckminster Fuller",
+    "Category":"Architect",
+    "Activity":"Sleeping",
+    "StartGMT":12,
+    "StopGMT":13
+  },
+  {
+    "Name":"Buckminster Fuller",
+    "Category":"Architect",
+    "Activity":"Working",
+    "StartGMT":13,
+    "StopGMT":19
+  },
+  {
+    "Name":"Buckminster Fuller",
+    "Category":"Architect",
+    "Activity":"Sleeping",
+    "StartGMT":19,
+    "StopGMT":20
+  },
+  {
+    "Name":"Buckminster Fuller",
+    "Category":"Architect",
+    "Activity":"Working",
+    "StartGMT":20,
+    "StopGMT":2
+  },
+  {
+    "Name":"Buckminster Fuller",
+    "Category":"Architect",
+    "Activity":"Sleeping",
+    "StartGMT":2,
+    "StopGMT":3
+  },
+  {
+    "Name":"Buckminster Fuller",
+    "Category":"Architect",
+    "Activity":"Working",
+    "StartGMT":3,
+    "StopGMT":5
+  },
+  {
+    "Name":"Buckminster Fuller",
+    "Category":"Architect",
+    "Activity":"Sleeping",
+    "StartGMT":5,
+    "StopGMT":6
+  },
+  {
+    "Name":"Paul Erdos",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":2
+  },
+  {
+    "Name":"Paul Erdos",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":2,
+    "StopGMT":5
+  },
+  {
+    "Name":"Andy Warhol",
+    "Category":"Artist",
+    "Activity":"Visiting",
+    "StartGMT":8,
+    "StopGMT":15
+  },
+  {
+    "Name":"Andy Warhol",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":15,
+    "StopGMT":18
+  },
+  {
+    "Name":"Andy Warhol",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":24,
+    "StopGMT":7
+  },
+  {
+    "Name":"V.S. Pritchett",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":13
+  },
+  {
+    "Name":"V.S. Pritchett",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":13,
+    "StopGMT":14
+  },
+  {
+    "Name":"V.S. Pritchett",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":14,
+    "StopGMT":16
+  },
+  {
+    "Name":"V.S. Pritchett",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":17,
+    "StopGMT":19
+  },
+  {
+    "Name":"V.S. Pritchett",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":23,
+    "StopGMT":7
+  },
+  {
+    "Name":"Edmund Wilson",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":16
+  },
+  {
+    "Name":"Edmund Wilson",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":18,
+    "StopGMT":2
+  },
+  {
+    "Name":"John Updike",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Albert Einstein",
+    "Category":"Scientist",
+    "Activity":"Walking",
+    "StartGMT":10,
+    "StopGMT":11
+  },
+  {
+    "Name":"Albert Einstein",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":11,
+    "StopGMT":13
+  },
+  {
+    "Name":"Albert Einstein",
+    "Category":"Scientist",
+    "Activity":"Walking",
+    "StartGMT":13,
+    "StopGMT":14
+  },
+  {
+    "Name":"Albert Einstein",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":18
+  },
+  {
+    "Name":"Albert Einstein",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":19,
+    "StopGMT":22
+  },
+  {
+    "Name":"Albert Einstein",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":24,
+    "StopGMT":9
+  },
+  {
+    "Name":"L. Frank Baum",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":9,
+    "StopGMT":13
+  },
+  {
+    "Name":"L. Frank Baum",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":16
+  },
+  {
+    "Name":"Knut Hamsen",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":2,
+    "StopGMT":4
+  },
+  {
+    "Name":"Willa Cather",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":12
+  },
+  {
+    "Name":"Willa Cather",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":13,
+    "StopGMT":15
+  },
+  {
+    "Name":"Willa Cather",
+    "Category":"Writer",
+    "Activity":"Visiting",
+    "StartGMT":15,
+    "StopGMT":19
+  },
+  {
+    "Name":"Ayn Rand",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":5,
+    "StopGMT":24
+  },
+  {
+    "Name":"Ayn Rand",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":24,
+    "StopGMT":5
+  },
+  {
+    "Name":"George Orwell",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":18
+  },
+  {
+    "Name":"George Orwell",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":18,
+    "StopGMT":20
+  },
+  {
+    "Name":"George Orwell",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":7
+  },
+  {
+    "Name":"James T. Farrell",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":17
+  },
+  {
+    "Name":"James T. Farrell",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":19,
+    "StopGMT":23
+  },
+  {
+    "Name":"James T. Farrell",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":6
+  },
+  {
+    "Name":"Jackson Pollock",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":13,
+    "StopGMT":18
+  },
+  {
+    "Name":"Jackson Pollock",
+    "Category":"Artist",
+    "Activity":"Drinking",
+    "StartGMT":20,
+    "StopGMT":2
+  },
+  {
+    "Name":"Jackson Pollock",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":2,
+    "StopGMT":12
+  },
+  {
+    "Name":"Carson McCullers",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":11,
+    "StopGMT":15
+  },
+  {
+    "Name":"Carson McCullers",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":15,
+    "StopGMT":17
+  },
+  {
+    "Name":"Carson McCullers",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":21,
+    "StopGMT":6
+  },
+  {
+    "Name":"Willem de Kooning",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":11,
+    "StopGMT":2
+  },
+  {
+    "Name":"Willem de Kooning",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":3,
+    "StopGMT":10
+  },
+  {
+    "Name":"Jean Stafford",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":11,
+    "StopGMT":15
+  },
+  {
+    "Name":"Jean Stafford",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":19,
+    "StopGMT":1
+  },
+  {
+    "Name":"Jean Stafford",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":3,
+    "StopGMT":9
+  },
+  {
+    "Name":"Donald Barthelme",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":13
+  },
+  {
+    "Name":"Donald Barthelme",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":13,
+    "StopGMT":15
+  },
+  {
+    "Name":"Alice Munro",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":14,
+    "StopGMT":17
+  },
+  {
+    "Name":"Jerzy Kosinski",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":4,
+    "StopGMT":8
+  },
+  {
+    "Name":"Jerzy Kosinski",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":14,
+    "StopGMT":18
+  },
+  {
+    "Name":"Jerzy Kosinski",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":19,
+    "StopGMT":4
+  },
+  {
+    "Name":"Isaac Asimov",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":5,
+    "StopGMT":23
+  },
+  {
+    "Name":"Isaac Asimov",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":5
+  },
+  {
+    "Name":"Oliver Sacks",
+    "Category":"Scientist",
+    "Activity":"Walking",
+    "StartGMT":5,
+    "StopGMT":6
+  },
+  {
+    "Name":"Oliver Sacks",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":7,
+    "StopGMT":11
+  },
+  {
+    "Name":"Oliver Sacks",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":13,
+    "StopGMT":18
+  },
+  {
+    "Name":"Oliver Sacks",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":5
+  },
+  {
+    "Name":"Anne Rice",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":22,
+    "StopGMT":7
+  },
+  {
+    "Name":"Anne Rice",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":9,
+    "StopGMT":18
+  },
+  {
+    "Name":"Charles Schulz",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":9,
+    "StopGMT":16
+  },
+  {
+    "Name":"William Gass",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":12
+  },
+  {
+    "Name":"William Gass",
+    "Category":"Writer",
+    "Activity":"Teaching",
+    "StartGMT":14,
+    "StopGMT":17
+  },
+  {
+    "Name":"William Gass",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"David Foster Wallace",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":12,
+    "StopGMT":15
+  },
+  {
+    "Name":"David Foster Wallace",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":3,
+    "StopGMT":11
+  },
+  {
+    "Name":"Marina Abramovic",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":20
+  },
+  {
+    "Name":"Marina Abramovic",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Stephen King",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":13
+  },
+  {
+    "Name":"Saul Bellow",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":13
+  },
+  {
+    "Name":"Gerhard Richter",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":13
+  },
+  {
+    "Name":"Gerhard Richter",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":15,
+    "StopGMT":20
+  },
+  {
+    "Name":"Jonathan Franzen",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":19
+  },
+  {
+    "Name":"Jonathan Franzen",
+    "Category":"Writer",
+    "Activity":"Drinking",
+    "StartGMT":19,
+    "StopGMT":22
+  },
+  {
+    "Name":"Jonathan Franzen",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":23,
+    "StopGMT":7
+  },
+  {
+    "Name":"Maira Kalman",
+    "Category":"Artist",
+    "Activity":"Walking",
+    "StartGMT":7,
+    "StopGMT":8
+  },
+  {
+    "Name":"Maira Kalman",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":8,
+    "StopGMT":14
+  },
+  {
+    "Name":"Maira Kalman",
+    "Category":"Artist",
+    "Activity":"Walking",
+    "StartGMT":14,
+    "StopGMT":16
+  },
+  {
+    "Name":"Maira Kalman",
+    "Category":"Artist",
+    "Activity":"Working",
+    "StartGMT":16,
+    "StopGMT":18
+  },
+  {
+    "Name":"Maira Kalman",
+    "Category":"Artist",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Georges Simenon",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":9
+  },
+  {
+    "Name":"Georges Simenon",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":10,
+    "StopGMT":13
+  },
+  {
+    "Name":"Georges Simenon",
+    "Category":"Writer",
+    "Activity":"Walking",
+    "StartGMT":17,
+    "StopGMT":19
+  },
+  {
+    "Name":"Georges Simenon",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Stephen Jay Gould",
+    "Category":"Scientist",
+    "Activity":"Working",
+    "StartGMT":6,
+    "StopGMT":22
+  },
+  {
+    "Name":"Stephen Jay Gould",
+    "Category":"Scientist",
+    "Activity":"Sleeping",
+    "StartGMT":22,
+    "StopGMT":6
+  },
+  {
+    "Name":"Bernard Malamud",
+    "Category":"Writer",
+    "Activity":"Working",
+    "StartGMT":10,
+    "StopGMT":17
+  },
+  {
+    "Name":"Bernard Malamud",
+    "Category":"Writer",
+    "Activity":"Teaching",
+    "StartGMT":18,
+    "StopGMT":22
+  },
+  {
+    "Name":"Bernard Malamud",
+    "Category":"Writer",
+    "Activity":"Sleeping",
+    "StartGMT":24,
+    "StopGMT":8
+  }
+]

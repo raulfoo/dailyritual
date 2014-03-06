@@ -1,0 +1,737 @@
+[
+  {
+    "Name":"W.H. Auden",
+    "Start":1907,
+    "Stop":1973
+  },
+  {
+    "Name":"Francis Bacon",
+    "Start":1561,
+    "Stop":1626
+  },
+  {
+    "Name":"Thomas Wolfe",
+    "Start":1900,
+    "Stop":1938
+  },
+  {
+    "Name":"Patricia Highsmith",
+    "Start":1921,
+    "Stop":1995
+  },
+  {
+    "Name":"Federico Fellini",
+    "Start":1920,
+    "Stop":1993
+  },
+  {
+    "Name":"Ingmar Bergman",
+    "Start":1918,
+    "Stop":2007
+  },
+  {
+    "Name":"Morton Feldman",
+    "Start":1926,
+    "Stop":1987
+  },
+  {
+    "Name":"Wolfgang Amadeus Mozart",
+    "Start":1756,
+    "Stop":1791
+  },
+  {
+    "Name":"Ludwig van Beethoven",
+    "Start":1770,
+    "Stop":1827
+  },
+  {
+    "Name":"Soren Kierkegaard",
+    "Start":1813,
+    "Stop":1855
+  },
+  {
+    "Name":"Voltaire",
+    "Start":1694,
+    "Stop":1778
+  },
+  {
+    "Name":"Benjamin Franklin",
+    "Start":1706,
+    "Stop":1790
+  },
+  {
+    "Name":"Anthony Trollope",
+    "Start":1815,
+    "Stop":1882
+  },
+  {
+    "Name":"Jane Austen",
+    "Start":1775,
+    "Stop":1817
+  },
+  {
+    "Name":"Frederic Chopin",
+    "Start":1810,
+    "Stop":1849
+  },
+  {
+    "Name":"Gustave Flaubert",
+    "Start":1821,
+    "Stop":1880
+  },
+  {
+    "Name":"Thomas Mann",
+    "Start":1875,
+    "Stop":1955
+  },
+  {
+    "Name":"Karl Marx",
+    "Start":1818,
+    "Stop":1883
+  },
+  {
+    "Name":"Sigmund Freud",
+    "Start":1856,
+    "Stop":1939
+  },
+  {
+    "Name":"Carl Jung",
+    "Start":1875,
+    "Stop":1961
+  },
+  {
+    "Name":"Richard Strauss",
+    "Start":1864,
+    "Stop":1949
+  },
+  {
+    "Name":"Henri Mattise",
+    "Start":1869,
+    "Stop":1954
+  },
+  {
+    "Name":"Joan Miro",
+    "Start":1893,
+    "Stop":1983
+  },
+  {
+    "Name":"Gertrude Stein",
+    "Start":1874,
+    "Stop":1946
+  },
+  {
+    "Name":"Ernest Hemingway",
+    "Start":1899,
+    "Stop":1961
+  },
+  {
+    "Name":"Henry Miller",
+    "Start":1891,
+    "Stop":1980
+  },
+  {
+    "Name":"F Scott Fitzgerald",
+    "Start":1896,
+    "Stop":1940
+  },
+  {
+    "Name":"William Faulkner",
+    "Start":1897,
+    "Stop":1962
+  },
+  {
+    "Name":"Benjamin Britten",
+    "Start":1913,
+    "Stop":1976
+  },
+  {
+    "Name":"Simone de Beauvoir",
+    "Start":1908,
+    "Stop":1986
+  },
+  {
+    "Name":"Henri de Toulouse-Lautrec",
+    "Start":1864,
+    "Stop":1901
+  },
+  {
+    "Name":"Gustav Mahler",
+    "Start":1860,
+    "Stop":1911
+  },
+  {
+    "Name":"Ann Beattie",
+    "Start":1947,
+    "Stop":2014
+  },
+  {
+    "Name":"Gunter Grass",
+    "Start":1927,
+    "Stop":2014
+  },
+  {
+    "Name":"Tom Stoppard",
+    "Start":1937,
+    "Stop":2014
+  },
+  {
+    "Name":"Haruki Murakami",
+    "Start":1949,
+    "Stop":2014
+  },
+  {
+    "Name":"Toni Morrison",
+    "Start":1931,
+    "Stop":2014
+  },
+  {
+    "Name":"Joyce Carol Oates",
+    "Start":1938,
+    "Stop":2014
+  },
+  {
+    "Name":"Chuck Close",
+    "Start":1940,
+    "Stop":2014
+  },
+  {
+    "Name":"Francine Prose",
+    "Start":1947,
+    "Stop":2014
+  },
+  {
+    "Name":"John Adams",
+    "Start":1735,
+    "Stop":1826
+  },
+  {
+    "Name":"Steve Reich",
+    "Start":1936,
+    "Stop":2014
+  },
+  {
+    "Name":"Nicholson Baker",
+    "Start":1957,
+    "Stop":2014
+  },
+  {
+    "Name":"BF Skinner",
+    "Start":1904,
+    "Stop":1990
+  },
+  {
+    "Name":"Margaret Mead",
+    "Start":1901,
+    "Stop":1978
+  },
+  {
+    "Name":"Samuel Johnson",
+    "Start":1709,
+    "Stop":1784
+  },
+  {
+    "Name":"James Boswell",
+    "Start":1740,
+    "Stop":1795
+  },
+  {
+    "Name":"Immanuel Kant",
+    "Start":1724,
+    "Stop":1804
+  },
+  {
+    "Name":"William James",
+    "Start":1842,
+    "Stop":1910
+  },
+  {
+    "Name":"Henry James",
+    "Start":1843,
+    "Stop":1916
+  },
+  {
+    "Name":"Franz Kafka",
+    "Start":1883,
+    "Stop":1924
+  },
+  {
+    "Name":"James Joyce",
+    "Start":1882,
+    "Stop":1941
+  },
+  {
+    "Name":"Marcel Proust",
+    "Start":1871,
+    "Stop":1922
+  },
+  {
+    "Name":"Samuel Becket",
+    "Start":1906,
+    "Stop":1989
+  },
+  {
+    "Name":"Igor Stravinsky",
+    "Start":1882,
+    "Stop":1971
+  },
+  {
+    "Name":"Erik Satie",
+    "Start":1866,
+    "Stop":1925
+  },
+  {
+    "Name":"Pablo Picasso",
+    "Start":1881,
+    "Stop":1973
+  },
+  {
+    "Name":"T.S. Elliot",
+    "Start":1888,
+    "Stop":1965
+  },
+  {
+    "Name":"Henry Green",
+    "Start":1905,
+    "Stop":1973
+  },
+  {
+    "Name":"Somerset Maugham",
+    "Start":1874,
+    "Stop":1965
+  },
+  {
+    "Name":"Graham Greene",
+    "Start":1904,
+    "Stop":1991
+  },
+  {
+    "Name":"Joseph Cornell",
+    "Start":1903,
+    "Stop":1972
+  },
+  {
+    "Name":"Sylvia Plath",
+    "Start":1932,
+    "Stop":1963
+  },
+  {
+    "Name":"John Cheever",
+    "Start":1912,
+    "Stop":1982
+  },
+  {
+    "Name":"W.B. Yeats",
+    "Start":1865,
+    "Stop":1939
+  },
+  {
+    "Name":"Wallace Stevens",
+    "Start":1879,
+    "Stop":1955
+  },
+  {
+    "Name":"Kingsley Amis",
+    "Start":1922,
+    "Stop":1995
+  },
+  {
+    "Name":"Martin Amis",
+    "Start":1949,
+    "Stop":2014
+  },
+  {
+    "Name":"Umberto Eco",
+    "Start":1932,
+    "Stop":2014
+  },
+  {
+    "Name":"David Lynch",
+    "Start":1946,
+    "Stop":2014
+  },
+  {
+    "Name":"Maya Angelou",
+    "Start":1928,
+    "Stop":2014
+  },
+  {
+    "Name":"George Balanchine",
+    "Start":1904,
+    "Stop":1983
+  },
+  {
+    "Name":"Al Hirschfield",
+    "Start":1903,
+    "Stop":2003
+  },
+  {
+    "Name":"Truman Capote",
+    "Start":1924,
+    "Stop":1984
+  },
+  {
+    "Name":"H.L. Mencken",
+    "Start":1880,
+    "Stop":1956
+  },
+  {
+    "Name":"Philip Larkin",
+    "Start":1922,
+    "Stop":1985
+  },
+  {
+    "Name":"Frank Lloyd Wright",
+    "Start":1867,
+    "Stop":1959
+  },
+  {
+    "Name":"George Gershwin",
+    "Start":1898,
+    "Stop":1937
+  },
+  {
+    "Name":"Joseph Heller",
+    "Start":1923,
+    "Stop":1999
+  },
+  {
+    "Name":"James Dickey",
+    "Start":1923,
+    "Stop":1997
+  },
+  {
+    "Name":"Nikola Tesla",
+    "Start":1856,
+    "Stop":1943
+  },
+  {
+    "Name":"Glenn Gould",
+    "Start":1932,
+    "Stop":1982
+  },
+  {
+    "Name":"Flannery O'Connor",
+    "Start":1925,
+    "Stop":1964
+  },
+  {
+    "Name":"William Styron",
+    "Start":1925,
+    "Stop":2006
+  },
+  {
+    "Name":"Philip Roth",
+    "Start":1933,
+    "Stop":2014
+  },
+  {
+    "Name":"PG Wodehouse",
+    "Start":1881,
+    "Stop":1975
+  },
+  {
+    "Name":"Thomas Hobbes",
+    "Start":1588,
+    "Stop":1679
+  },
+  {
+    "Name":"John Milton",
+    "Start":1608,
+    "Stop":1674
+  },
+  {
+    "Name":"Renee Descarte",
+    "Start":1596,
+    "Stop":1650
+  },
+  {
+    "Name":"Friedrich Schiller",
+    "Start":1759,
+    "Stop":1805
+  },
+  {
+    "Name":"Franz Shubert",
+    "Start":1797,
+    "Stop":1828
+  },
+  {
+    "Name":"Franz List",
+    "Start":1811,
+    "Stop":1886
+  },
+  {
+    "Name":"Honore Balzac",
+    "Start":1799,
+    "Stop":1850
+  },
+  {
+    "Name":"Victor Hugo",
+    "Start":1802,
+    "Stop":1885
+  },
+  {
+    "Name":"Charles Dickens",
+    "Start":1812,
+    "Stop":1870
+  },
+  {
+    "Name":"Charles Darwin",
+    "Start":1809,
+    "Stop":1882
+  },
+  {
+    "Name":"Herman Melville",
+    "Start":1819,
+    "Stop":1891
+  },
+  {
+    "Name":"Nathaniel Hawthorne",
+    "Start":1804,
+    "Stop":1864
+  },
+  {
+    "Name":"Leo Tolstoy",
+    "Start":1828,
+    "Stop":1910
+  },
+  {
+    "Name":"Mark Twain",
+    "Start":1835,
+    "Stop":1910
+  },
+  {
+    "Name":"Alexander Graham Bell",
+    "Start":1847,
+    "Stop":1922
+  },
+  {
+    "Name":"Vincent Van Gogh",
+    "Start":1853,
+    "Stop":1890
+  },
+  {
+    "Name":"N.C. Wyeth",
+    "Start":1882,
+    "Stop":1945
+  },
+  {
+    "Name":"Georgia O'Keefe",
+    "Start":1887,
+    "Stop":1986
+  },
+  {
+    "Name":"Sergey Rachmaninoff",
+    "Start":1873,
+    "Stop":1943
+  },
+  {
+    "Name":"Vladimir Nabokov",
+    "Start":1899,
+    "Stop":1977
+  },
+  {
+    "Name":"Balthus",
+    "Start":1908,
+    "Stop":2001
+  },
+  {
+    "Name":"Le Corbusier",
+    "Start":1887,
+    "Stop":1965
+  },
+  {
+    "Name":"Buckminster Fuller",
+    "Start":1895,
+    "Stop":1983
+  },
+  {
+    "Name":"Paul Erdos",
+    "Start":1913,
+    "Stop":1996
+  },
+  {
+    "Name":"Andy Warhol",
+    "Start":1928,
+    "Stop":1987
+  },
+  {
+    "Name":"V.S. Pritchett",
+    "Start":1900,
+    "Stop":1997
+  },
+  {
+    "Name":"Edmund Wilson",
+    "Start":1895,
+    "Stop":1972
+  },
+  {
+    "Name":"John Updike",
+    "Start":1932,
+    "Stop":2009
+  },
+  {
+    "Name":"Albert Einstein",
+    "Start":1879,
+    "Stop":1955
+  },
+  {
+    "Name":"L. Frank Baum",
+    "Start":1856,
+    "Stop":1919
+  },
+  {
+    "Name":"Knut Hamsen",
+    "Start":1859,
+    "Stop":1952
+  },
+  {
+    "Name":"Willa Cather",
+    "Start":1873,
+    "Stop":1947
+  },
+  {
+    "Name":"Ayn Rand",
+    "Start":1905,
+    "Stop":1982
+  },
+  {
+    "Name":"George Orwell",
+    "Start":1903,
+    "Stop":1950
+  },
+  {
+    "Name":"James T. Farrell",
+    "Start":1904,
+    "Stop":1979
+  },
+  {
+    "Name":"Jackson Pollock",
+    "Start":1912,
+    "Stop":1956
+  },
+  {
+    "Name":"Carson McCullers",
+    "Start":1917,
+    "Stop":1967
+  },
+  {
+    "Name":"Jean Stafford",
+    "Start":1915,
+    "Stop":1979
+  },
+  {
+    "Name":"Donald Barthelme",
+    "Start":1931,
+    "Stop":1989
+  },
+  {
+    "Name":"Alice Munro",
+    "Start":1931,
+    "Stop":2014
+  },
+  {
+    "Name":"Jerzy Kosinski",
+    "Start":1933,
+    "Stop":1991
+  },
+  {
+    "Name":"Isaac Asimov",
+    "Start":1919,
+    "Stop":1992
+  },
+  {
+    "Name":"Oliver Sacks",
+    "Start":1933,
+    "Stop":2014
+  },
+  {
+    "Name":"Anne Rice",
+    "Start":1941,
+    "Stop":2014
+  },
+  {
+    "Name":"Charles Schulz",
+    "Start":1922,
+    "Stop":2000
+  },
+  {
+    "Name":"William Gass",
+    "Start":1924,
+    "Stop":2014
+  },
+  {
+    "Name":"Marina Abramovic",
+    "Start":1946,
+    "Stop":2014
+  },
+  {
+    "Name":"Stephen King",
+    "Start":1947,
+    "Stop":2014
+  },
+  {
+    "Name":"Saul Bellow",
+    "Start":1915,
+    "Stop":2005
+  },
+  {
+    "Name":"Gerhard Richter",
+    "Start":1932,
+    "Stop":2014
+  },
+  {
+    "Name":"Jonathan Franzen",
+    "Start":1959,
+    "Stop":2014
+  },
+  {
+    "Name":"Maira Kalman",
+    "Start":1949,
+    "Stop":2014
+  },
+  {
+    "Name":"Georges Simenon",
+    "Start":1903,
+    "Stop":1989
+  },
+  {
+    "Name":"Stephen Jay Gould",
+    "Start":1941,
+    "Stop":2002
+  },
+  {
+    "Name":"Bernard Malamud",
+    "Start":1914,
+    "Stop":1986
+  },
+  {
+    "Name":"Louis Khan",
+    "Start":1901,
+    "Stop":1974
+  },
+  {
+    "Name":"Edith Sitwell",
+    "Start":1887,
+    "Stop":1964
+  },
+  {
+    "Name":"Willem de Kooning",
+    "Start":1904,
+    "Stop":1997
+  },
+  {
+    "Name":"David Foster Wallace",
+    "Start":1962,
+    "Stop":2008
+  },
+  {
+    "Name":"Jean-Paul Sartre",
+    "Start":1905,
+    "Stop":1980
+  },
+  {
+    "Name":"Pyotr Ilyich Tchaikovsky",
+    "Start":1840,
+    "Stop":1893
+  }
+]

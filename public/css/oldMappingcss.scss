@@ -1,0 +1,132 @@
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+
+.countriesLight{
+  fill: green;
+  stroke: green;
+
+}
+
+
+
+
+
+.line {
+  fill: none;
+  stroke: $darkGreen;
+  stroke-width: 1.5px;
+}
+
+.graph{
+  max-width:960px;
+  
+}
+
+#chloropleth2{
+  margin-top: -467px;
+
+}
+
+#chloropleth3{
+
+}
+
+#chloropleth4{
+  margin-top: -467px;
+
+
+
+}
+
+
+#mapContainerDay{
+  
+  max-height: 500px;
+  margin-top: -467px;
+  overflow: hidden;
+  /*-webkit-mask-image: url(images/tempMask.png);*/
+-webkit-clip-path: url(#clip2)
+ 
+ 
+}
+
+#arrow{
+ /* position: absolute;
+  top: 550px;*/
+  font-size: 3em;
+
+}
+
+
+#mapContainer{
+  max-width: 962px;
+  max-height: 500px;
+  overflow: hidden;
+
+}
+
+/*
+#mapMask{
+
+max-width: 962px;
+max-height: 600px;
+width: 962px;
+height: 500px;
+margin-top: -467px;
+
+-webkit-clip-image: url("#parabola");
+
+
+}*/
+
+
+#parabola{
+  margin-top: -467px;
+  width: 200px;
+  height: 200px;
+  z-index: 200;
+ /*-webkit-mask-image: url(images/parabola.png)*/
+ 
+}
+
+/*
+#slider{
+  top: 500px;
+  max-width: 960px;
+  width: 100px;
+  
+  a{
+    z-index: 200;
+    height: 50px;
+  } 
+}*/
+
+
+#locationContain{
+  margin-top: -467px;
+  max-width: 962px;
+  max-height: 500px;
+  overflow: hidden;
+
+  /*webkit-clip-path: rectangle(0px,960px,500px,0px);*/
+  
+  #locations2{
+   margin-top: -467px;
+  }
+}
+
+
+
+
+
+
+

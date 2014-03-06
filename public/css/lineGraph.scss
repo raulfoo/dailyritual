@@ -1,0 +1,179 @@
+@import "css/mixins";
+
+#content{
+  margin: auto;
+  width: 90%;
+  min-width: 960px;
+  max-width: 960px;
+  
+
+  
+  #chosenWrapper{
+    
+    margin-left: 80%;
+    margin-top: -90px;
+    z-index: 300;
+    position: relative;
+  
+    #chosen{
+     overflow: scroll;
+     width: 200px;
+     height: 200px;
+     font-size: 2em;
+     word-wrap: break-word;
+     z-index: 300;
+   
+    }
+    
+   }
+    
+  td:hover{ 
+    background-color:$lightGray;
+  }
+  
+  #timeSeries{
+    max-width: 960px;
+   
+    .line {
+      fill: none;
+      stroke: $darkGreen;
+      stroke-width: 1.5px;
+    }
+    
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+  }
+  
+  #controls{
+    position: relative;
+    z-index: 200;
+    max-width: 960px;
+    
+    #filters{
+      position: relative;
+      margin-top: 20px;
+      z-index: 200;
+      margin-left: 20px;
+      max-width: 300px;
+      
+      input{
+        margin: 15px;
+      }
+      
+      input[type="text"]{
+        padding: 10px;
+        min-width: 175px;
+        width: 175px;
+      }
+      
+      
+      #searchPersonDiv{
+      
+        table{
+          position: absolute;
+          max-height: 150px;
+        
+        }
+      }
+    }
+  }
+  
+  #barGraphActivity{
+    position: relative;
+    margin-top: -170px;
+    margin-top: -210px;
+    max-width: 960px;
+    width: 960px;
+  }
+  
+  #bottomControls{
+    margin-top: 0px;
+    #sliderPanel{
+    
+      max-width: 960px;
+      width: 960px;
+      z-index: 200;
+      
+      #dateSlider{
+        height: 10px;
+        min-height: 10px;
+        margin-left: 50px;
+        width: 900px;
+        -webkit-clip-path: rectangle(0px,500px,50px,0px);
+      
+      }
+      #slideOptions{
+        margin-top: 15px;
+        float: right;
+        z-index: 200;
+        
+        .button{
+          visibility: hidden;
+          margin-top: 0px;
+          z-index: 200;
+  
+        }
+      
+        #slideVal{
+          position: relative;
+          font-size: 2em;
+          margin-left: 15px;
+          margin-right: 15px;
+          top: -150px;
+    
+        }
+      }
+    }
+  }
+  
+  #changeGraphTypeSliderDiv{
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 200px;
+    
+    #centerDiv{
+      position: relative;
+      
+      #changeGraphTypeSlider{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      p{
+        width: 95%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+#pop-up {
+  display: none;
+  z-index: 300;
+  position:absolute;
+  color: white;
+  font-size: 14px;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 10px 5px 10px;
+  -moz-border-radius: 8px 8px;
+  border-radius: 8px 8px;
+  max-width: 300px;
+
+  #pop-up-content {
+    font-size: 12px;
+  }
+  #pop-desc {
+    width: 250px;
+    .alignRightTD{
+      padding-left: 8px;
+      text-align: right;
+    }
+  }  
+}
