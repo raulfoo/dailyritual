@@ -1,18 +1,18 @@
 $(document).ready(function(){
-
+  //console.log("loading")
   $("#searchPerson").keyup(function(e){
     search = $(this).val()
     regSearch=RegExp(search,"i")
     if($(this).val().length>2) {
       searchNames = _.uniq(testingDat1.filter(function(e) { return e.Name.match(regSearch)}).map(function(d) {return d.Name}))
-    
+      searchNames = searchNames.slice(0,8)
       if(searchNames.length==0){
         searchNames = ["No matches in database"]
       }
       
       dropTable = ""
       searchNames.forEach(function(d){
-        dropTable = dropTable+"<tr><td><a>"+d+"</a></td></tr>"
+        dropTable = dropTable+"<tr><td><a class='clickName'>"+d+"</a></td></tr>"
       })
       $("#searchTableDropDown").html(dropTable)
     }else{
@@ -26,7 +26,12 @@ $(document).ready(function(){
       
   })
   
-  $("#searchTableDropDown").on("click","a", function(){
+ /* $("#searchTableDropDown").on("click","a", function(){
+    searchName = $(this).text() 
+    searchMultipleName(searchName)
+  })*/
+  
+  $("#content").on("click",".clickName", function(){
     searchName = $(this).text() 
     searchMultipleName(searchName)
   })
@@ -72,6 +77,8 @@ $(document).ready(function(){
       otherOptions = settings["options"]
       options = settings["otherOptions"]
     }
+    
+    //this currently resets your input data
   
     metric ="absolute"
     //if($(this).val()==1){
@@ -123,7 +130,6 @@ function buildSelects(data){
   index = 0
   topOptions=["-Occupation-","-Activity-"]
   
-  console.log(top)
 
   builds.forEach(function(dat){
   output = "<option value='"+topOptions[index]+"'>"+topOptions[index]+"</option>"
@@ -159,7 +165,7 @@ function buildGraphData(data,pickType,subLevel,options,otherOptions,color){
     activities.forEach(function(cat){
       peoples = []
       tempDat.filter(function(d){
-        if(d[secondLevel] == cat && ((d.StartGMT <=j && d.StopGMT>j) || ((parseInt(d.StopGMT) < parseInt(d.StartGMT)) && (j > d.StartGMT || j <= d.StopGMT)))){
+        if(d[secondLevel] == cat && ((parseInt(d.StartGMT) <=j && parseInt(d.StopGMT)>j) || ((parseInt(d.StopGMT) < parseInt(d.StartGMT)) && (j >= parseInt(d.StartGMT) || j < parseInt(d.StopGMT))))){
           peoples.push(d.Name)
           //pointArray.filter(function(e) { return e.Name==d.Name}).map(function(e) {return e.color = color(cat)})
         }
@@ -244,14 +250,19 @@ buildLineGraphDat = function(data){
   
   lineDat = []
   for(i=minSlide;i<=maxSlide;i++){
-    yearDat = filterByDate(testingDat1,tempDates,i)
+    yearDat = filterByDate(data,tempDates,i)
     if(yearDat.length==0){
       percent = 0
+      people = []
     }else{
       percent = relativeAbundance(yearDat,type,subLevel)
+      people = _.uniq(yearDat.filter(function(y){ if(y[type]==subLevel) return y}).map(function(z) {return z.Name}))
+
     }
-    lineDat.push({date: i, close: percent})
+    lineDat.push({date: i, close: percent, people: people})
+    
   }
+  
   
   buildTimeSeries(lineDat)
 }
@@ -259,15 +270,19 @@ buildLineGraphDat = function(data){
 
 updateLineGraph = function(data){
   
+
   lineDat = []
   for(i=minSlide;i<=maxSlide;i++){
-    yearDat = filterByDate(testingDat1,tempDates,i)
+    yearDat = filterByDate(data,tempDates,i)
     if(yearDat.length==0){
       percent = 0
+      people= []
     }else{
       percent = relativeAbundance(yearDat,type,subLevel)
+      people = _.uniq(yearDat.filter(function(y){ if(y[type]==subLevel) return y}).map(function(z) {return z.Name}))
+
     }
-    lineDat.push({date: i, close: percent})
+    lineDat.push({date: i, close: percent, people: people})
   }
   
   updateTimeSeries(lineDat)
@@ -335,11 +350,23 @@ searchMultipleName = function(searchName){
       options = settings["otherOptions"]
     }
     
-    allNames = _.uniq(allNames).join(", <br>")
+    allNames = _.uniq(allNames)
+    if(allNames.length>1){
+      allNamesText=""
+      allNames.forEach(function(d){
+        allNamesText = allNamesText+"<a class='clickName'>"+d+"</a><br>"
+      
+      })
+   
+    
+    }else{
+      allNamesText = allNames
+    }
+   // allNames = _.uniq(allNames).join(", <br>")
    
     metric ="absolute"
     //put a dynamic font changer here to fit all input in box
-    $("#chosen").html(allNames)
+    $("#chosen").html(allNamesText)
 
 
     temp = tempDates.filter(function(e){

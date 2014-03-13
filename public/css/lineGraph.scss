@@ -1,10 +1,28 @@
 @import "css/mixins";
 
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+  
+  
 #content{
   margin: auto;
   width: 90%;
   min-width: 960px;
   max-width: 960px;
+  display: none;
+  
+  .clickName{
+    font-size: .8em;
+  
+  }
   
 
   
@@ -16,7 +34,7 @@
     position: relative;
   
     #chosen{
-     overflow: scroll;
+     overflow: auto;
      width: 200px;
      height: 200px;
      font-size: 2em;
@@ -73,10 +91,15 @@
       
       
       #searchPersonDiv{
+        
       
         table{
           position: absolute;
           max-height: 150px;
+          
+          .clickName{
+            font-size: 1.5em;
+          }
         
         }
       }
@@ -88,11 +111,19 @@
     margin-top: -170px;
     margin-top: -210px;
     max-width: 960px;
+    min-height: 600px;
     width: 960px;
+    
+    path{
+      cursor: pointer; 
+    }
+    .legendRect{
+      cursor: pointer; 
+    }
   }
   
   #bottomControls{
-    margin-top: 0px;
+    margin-top: 200px;
     #sliderPanel{
     
       max-width: 960px;
@@ -128,6 +159,10 @@
     
         }
       }
+    }
+    #timeSeriesNames{
+      margin-top: 15px;
+      width: 900px;
     }
   }
   
@@ -176,4 +211,17 @@
       text-align: right;
     }
   }  
+}
+
+#clockImg{
+  z-index: -1;
+  position: relative;
+  margin-top: -427px;
+  margin-left: 376px;
+  img{
+    max-width: 208px;
+    max-height: 208px;
+  }
+  
+  
 }

@@ -1,22 +1,39 @@
 <% content_for :head do %>
      
-   <%= @pinion.js_url("/assets/js/slider.js") %> 
-   <%= @pinion.js_url("/assets/js/interactions.js") %> 
-   <%= @pinion.js_url("/assets/js/timeSeries.js") %> 
-   <%= @pinion.js_url("/assets/js/mouseover.js") %> 
-   <%= @pinion.js_url("/assets/js/lineGraph.js") %> 
+   <%#= @pinion.js_url("/assets/js/slider.js") %> 
+   <%#= @pinion.js_url("/assets/js/interactions.js") %> 
+   <%#= @pinion.js_url("/assets/js/timeSeries.js") %> 
+   <%#= @pinion.js_url("/assets/js/mouseover.js") %> 
+   <%#= @pinion.js_url("/assets/js/lineGraph.js") %> 
 
  
-   
-   <%= @pinion.css_url("/css/lineGraph.css") %>
-   <%= @pinion.css_url("/css/ui-lightness/jquery-ui-1.10.1.custom.min.css") %>
+    <script>
+    //explicity control script load order
+    [
+      'js/slider.js',
+      'js/interactions.js',
+      'js/timeSeries.js',
+      'js/mouseover.js',
+      'js/lineGraph.js'
+    ].forEach(function(src) {
+      var script = document.createElement('script');
+      script.src = src;
+      script.async = false;
+      document.head.appendChild(script);
+    });
+    
+    
+        
+    
+    </script>
+    
+    <%= @pinion.css_url("/css/lineGraph.css") %>
 
 
-  
    
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+   <!-- <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://d3js.org/queue.v1.min.js"></script>
-    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>-->
   
 <% end %>
 
@@ -33,7 +50,7 @@
     
     </select>
     <div id="searchPersonDiv">
-      <input type="text" id="searchPerson" name="person" placeholder="Search Specific Person"/>
+      <input type="text" id="searchPerson" name="person" placeholder="Search By Name"/>
       <table id="searchTableDropDown"></table>
     </div>
   </div>
@@ -66,6 +83,11 @@
   <input type="radio" name="metric" value="percent" checked="checked">Percent-->
   
   
+  <div id="clockImg">
+    <img src="images/dayNightCycleSmall.png"/>
+  </div>
+
+
   <div id="bottomControls">
     <div id="timeSeries"></div>
     <div id="sliderPanel">
@@ -76,8 +98,10 @@
         <a class="button" id="resetButton">Reset</a>
       </div>
     </div>
+    <div id="timeSeriesNames"></div>
   </div>
   
+
   
 </div>
 

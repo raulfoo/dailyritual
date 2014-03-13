@@ -8,8 +8,14 @@ $(document).ready(function(){
       max: 1,
       step: 1,
       slide: function( event, ui ) {
-       
         changeGraphType(ui.value)
+
+        if(ui.value==1){
+          $("#clockImg").fadeIn(1000)
+        }else{
+          $("#clockImg").fadeOut()
+
+        }
      
       }
     });
@@ -26,8 +32,7 @@ $(document).ready(function(){
       change: function( event, ui ) {
         if (event.originalEvent) {
           yearDat = filterByDate(testingDat1,tempDates,ui.value)
-          console.log(yearDat)
-          console.log("yearDat")
+    
           updateGraphs(yearDat,type,subLevel,options,otherOptions,metric)
         }
       }

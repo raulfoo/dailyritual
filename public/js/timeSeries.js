@@ -1,3 +1,4 @@
+
 buildTimeSeries = function(data){
   var margin = {top: 20, right: 20, bottom: 30, left: 50},
       width = 960 - margin.left - margin.right,
@@ -56,7 +57,44 @@ buildTimeSeries = function(data){
     svg.append("path")
         .data([data])
         .attr("class", "line")
-        .attr("d", line);
+        .attr("d", line)
+
+  var focus = svg.append("g")
+      .attr("class", "focus")
+      .style("display", "none");
+
+  focus.append("circle")
+      .attr("r", 4.5);
+
+  focus.append("text")
+      .attr("x", 9)
+      .attr("dy", ".35em");
+
+  svg.append("rect")
+      .attr("class", "overlay")
+      .attr("width", width)
+      .attr("height", height)
+      .on("mouseover", function() { focus.style("display", null); })
+      .on("mouseout", function() { focus.style("display", "none"); })
+      .on("mousemove", mousemove); //(data,x,y)
+      
+      
+
+  function mousemove() {
+    bisectDate = d3.bisector(function(d) { return d.date; }).left
+  
+    var x0 = x.invert(d3.mouse(this)[0]),
+        i = bisectDate(data, x0, 1),
+        d0 = data[i - 1],
+        d1 = data[i],
+        d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+    focus.attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
+    //focus.select("text").text(d.people.join(","));
+    $("#timeSeriesNames").text(d.people.join(", "));
+
+  }
+
+
 
 }
 
@@ -100,9 +138,48 @@ updateTimeSeries = function(data){
         .attr("class", "y axis")
         .call(yAxis)
       
-  d3.select("#timeSeries").selectAll("path.line")
+  svg = d3.select("#timeSeries g")
+  
+  svg.selectAll("path.line")
         .data([data]).transition()
         .attr("class", "line")
         .attr("d", line);
+        
+     
+  d3.select(".focus").remove()   
+        
+  var focus = svg.append("g")
+      .attr("class", "focus")
+      .style("display", "none");
+
+  focus.append("circle")
+      .attr("r", 4.5);
+
+  focus.append("text")
+      .attr("x", 9)
+      .attr("dy", ".35em");
+
+  svg.append("rect")
+      .attr("class", "overlay")
+      .attr("width", width)
+      .attr("height", height)
+      .on("mouseover", function() { focus.style("display", null); })
+      .on("mouseout", function() { focus.style("display", "none"); })
+      .on("mousemove", mousemove); //(data,x,y)
+      
+      
+
+  function mousemove() {
+    bisectDate = d3.bisector(function(d) { return d.date; }).left
+  
+    var x0 = x.invert(d3.mouse(this)[0]),
+        i = bisectDate(data, x0, 1),
+        d0 = data[i - 1],
+        d1 = data[i],
+        d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+    focus.attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
+    $("#timeSeriesNames").text(d.people.join(", "));
+  }
+
 
 }

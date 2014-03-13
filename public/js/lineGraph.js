@@ -45,9 +45,10 @@ color1 = d3.scale.ordinal()
   
 d3.json("json/activityDat.json", function(error, data) {
   
+    testingDat3 = data
     testingDat1 = data
-    buildSelects(data)
-    
+    builds = buildSelects(data)
+
      d3.json("json/lifeDates.json", function(error, dates) {
     
     
@@ -122,6 +123,7 @@ d3.json("json/activityDat.json", function(error, data) {
         color.domain(d3.keys(data[0]).filter(function(key) { return key !== "TimeZone"; }));
 
       index=0
+      
       data.forEach(function(d) {
         var y0 = 0;
        // d.ages = color.domain().map(function(name) { return {name: name, people: d[name], y0: y0, y1: y0 += +(d[name].length), rotateAngle: (index*15) }});
@@ -203,6 +205,7 @@ d3.json("json/activityDat.json", function(error, data) {
           .attr("transform", function(d, i) { return "translate(-100," + ((i * 20) + 310) +")"; });
     
       legend.append("rect")
+          .attr("class","legendRect")
           .attr("x", width - 18)
           .attr("width", 18)
           .attr("height", 18)
@@ -219,6 +222,7 @@ d3.json("json/activityDat.json", function(error, data) {
     }
     
     buildLineGraphDat(testingDat1)
+    $("#content").fadeIn(0)
        
     }); 
     
@@ -228,9 +232,11 @@ d3.json("json/activityDat.json", function(error, data) {
   
 function updateGraphs(data,type,subLevel,options,otherOptions,metric){
 
+    $("#searchPerson").val("")
     color = d3.scale.ordinal()
         .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
     
+    filterDat = data
     graphingDat = buildGraphData(data,subLevel,type,options,otherOptions,color)
     
     elementChoose = ["#barGraphActivity","#barGraphCategory"]
@@ -394,6 +400,7 @@ function updateGraphs(data,type,subLevel,options,otherOptions,metric){
           .attr("transform", function(d, i) { return "translate(-100," + ((i * 20) + 310) +")"; });
     
       legend.append("rect")
+          .attr("class","legendRect")
           .attr("x", width - 18)
           .attr("width", 18)
           .attr("height", 18)
@@ -422,16 +429,20 @@ function buildPath(y0,y1,tany0,tany1,rotateAngle,inputAngle){
     return "M 0 0"
     }
   
-  
+  largeArc = 0
+
   rotateAngle = rotateAngle/(360/(Math.PI*2))+(3*Math.PI/2)
+  
+    if(inputAngle> Math.PI) largeArc = 1
+
   path = "M"+(y1*Math.cos(rotateAngle))/3+" "+(convertY(y1*(Math.sin(rotateAngle))))
   path = path+" L"+(y0*Math.cos(rotateAngle))/3+" "+(convertY(y0*(Math.sin(rotateAngle))))
   //draw arc here
-  path = path+"A "+y0/3+" "+y0/3+" 0 0 1 "+ (y0*Math.cos(rotateAngle+inputAngle))/3+" "+(convertY(y0*(Math.sin(rotateAngle+inputAngle))))
+  path = path+"A "+y0/3+" "+y0/3+" 0 "+largeArc+" 1 "+ (y0*Math.cos(rotateAngle+inputAngle))/3+" "+(convertY(y0*(Math.sin(rotateAngle+inputAngle))))
   //replace arc with below line if want to remove
   //path = path+" L"+(y0*Math.cos(rotateAngle+inputAngle))/3+" "+(convertY(y0*(Math.sin(rotateAngle+inputAngle))))
-  path = path +"L"+(y1*Math.cos(rotateAngle+inputAngle))/3+" "+(convertY(y1*(Math.sin(rotateAngle+inputAngle))))//+" Z"
-  path = path+"A "+y1/3+" "+y1/3+" 0 0 0 "+ (y1*Math.cos(rotateAngle))/3+" "+(convertY(y1*(Math.sin(rotateAngle))))+" Z"  
+  path = path +"L"+(y1*Math.cos(rotateAngle+inputAngle))/3+" "+(convertY(y1*(Math.sin(rotateAngle+inputAngle))))
+  path = path+"A "+y1/3+" "+y1/3+" 0 "+largeArc+" 0 "+ (y1*Math.cos(rotateAngle))/3+" "+(convertY(y1*(Math.sin(rotateAngle))))+" Z"  
   
   return path
 
