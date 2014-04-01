@@ -1,4 +1,4 @@
-function createBarGraphs(occupationDat,activityDat,options,otherOptions,activity,occupation){
+function createBarGraphs(occupationDat,activityDat,activity,occupation){
 
   occDat = occupationDat.filter(function(d){
       return d["Activity"] == activity

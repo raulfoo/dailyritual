@@ -300,7 +300,7 @@ function updateGraphs(data,backButtonPressed){
     updateLineGraph(testingDat1,occupation)
     
     $(".barGraphWrapper").css("visibility","visible")
-    createBarGraphs(testingDat1,filterDat,options,otherOptions,activity,occupation)
+    createBarGraphs(testingDat1,filterDat,activity,occupation)
   
 }
 
