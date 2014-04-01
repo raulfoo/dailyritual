@@ -14,6 +14,7 @@
       'js/interactions.js',
       'js/timeSeries.js',
       'js/mouseover.js',
+      'js/barGraph.js',
       'js/lineGraph.js'
     ].forEach(function(src) {
       var script = document.createElement('script');
@@ -42,13 +43,15 @@
 <div id="controls">
 
   <div id="filters">
-    <span>Filter By:</span>
+    <span>When were the great</span>
     <select id="categorySelect" class="changeGraph">
     
     </select>
+    <span>of history</span>
     <select id="activitySelect" class="changeGraph">
     
     </select>
+    <span>?</span>
     <div id="searchPersonDiv">
       <input type="text" id="searchPerson" name="person" placeholder="Search By Name"/>
       <table id="searchTableDropDown"></table>
@@ -56,7 +59,7 @@
   </div>
  
   
-  <div id="changeGraphTypeSliderDiv">
+ <!-- <div id="changeGraphTypeSliderDiv">
     <div id="centerDiv">
       <p> View by Hour </p>
       <div id="changeGraphTypeSlider"></div>
@@ -64,15 +67,28 @@
     </div>
   
   </div>
+  -->
+  <div id="graphWrapper">
+    <div id="leftSideDisplay">  
+      <div id="clockActivity"></div>
+      <div id="clockImg">
+        <!--<img src="images/dayNightCycleSmall.png"/>-->
+      </div>
+      <div id="backLevel"><a class="button">Back</a></div>
+
+    </div>
   
-  <div id="chosenWrapper">
-    <div id="chosen"></div>
+    <div id="rightSideDisplay">
+      <div id="chosenWrapper">
+        <div id="chosen"></div>
+      </div>
+      <div class="barGraphWrapper"></div>
+    </div>
   </div>
-  
    
   
   
-  <div id="barGraphActivity"></div>
+  
  
   <!--
   <input type="radio" name="metric" value="clock"  checked="checked">Clock
@@ -83,10 +99,7 @@
   <input type="radio" name="metric" value="percent" checked="checked">Percent-->
   
   
-  <div id="clockImg">
-    <img src="images/dayNightCycleSmall.png"/>
-  </div>
-
+ 
 
   <div id="bottomControls">
     <div id="timeSeries"></div>
@@ -104,7 +117,6 @@
 
   
 </div>
-
 
 
 

@@ -766,7 +766,7 @@
     "Name":"Ernest Hemingway",
     "Category":"Writer",
     "Activity":"Sleeping",
-    "StartGMT":12,
+    "StartGMT":24,
     "StopGMT":6
   },
   {
@@ -1228,7 +1228,7 @@
     "Name":"William James",
     "Category":"Scientist",
     "Activity":"Sleeping",
-    "StartGMT":12,
+    "StartGMT":24,
     "StopGMT":8
   },
   {
@@ -1481,7 +1481,7 @@
     "Category":"Writer",
     "Activity":"Working",
     "StartGMT":21,
-    "StopGMT":12
+    "StopGMT":24
   },
   {
     "Name":"Henry Green",

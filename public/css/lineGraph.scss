@@ -1,5 +1,13 @@
 @import "css/mixins";
 
+.bar{
+  /*fill: steelblue;*/
+}
+
+.barGraphWrapper{
+
+  visibility: hidden;
+}
 
 .overlay {
   fill: none;
@@ -24,33 +32,13 @@
   
   }
   
-
-  
-  #chosenWrapper{
-    
-    margin-left: 80%;
-    margin-top: -90px;
-    z-index: 300;
-    position: relative;
-  
-    #chosen{
-     overflow: auto;
-     width: 200px;
-     height: 200px;
-     font-size: 2em;
-     word-wrap: break-word;
-     z-index: 300;
-   
-    }
-    
-   }
-    
   td:hover{ 
     background-color:$lightGray;
   }
   
   #timeSeries{
     max-width: 960px;
+    cursor: pointer;
    
     .line {
       fill: none;
@@ -77,7 +65,11 @@
       margin-top: 20px;
       z-index: 200;
       margin-left: 20px;
-      max-width: 300px;
+      max-width: 550px;
+      
+      span{
+        font-size: 1.6em;
+      }
       
       input{
         margin: 15px;
@@ -106,24 +98,88 @@
     }
   }
   
-  #barGraphActivity{
-    position: relative;
-    margin-top: -170px;
-    margin-top: -210px;
-    max-width: 960px;
-    min-height: 600px;
-    width: 960px;
+  #graphWrapper{
+    display: table;
     
-    path{
-      cursor: pointer; 
+    #leftSideDisplay{
+      display: table-cell;
+      
+      #clockActivity{
+        position: relative;
+        margin-top: -170px;
+        margin-top: -210px;
+        max-width: 960px;
+        min-height: 600px;
+        width: 550px;
+        
+        path{
+          cursor: pointer; 
+        }
+        .legendRect{
+          cursor: pointer; 
+        }
+      }
+      
+      #backLevel{
+        margin-top: 100px;
+        display: none;
+        a{
+          padding: 15px;
+        }
+      }
     }
-    .legendRect{
-      cursor: pointer; 
-    }
+    
+  #rightSideDisplay{  
+    display: table-cell;
+    
+    #chosenWrapper{
+      margin-left: 10%;
+      margin-top: -90px;
+      z-index: 300;
+      position: relative;
+    
+      #chosen{
+       overflow: auto;
+       width: 300px;
+       height: 200px;
+       font-size: 2em;
+       word-wrap: break-word;
+       z-index: 300;
+       
+       #correlationNav{
+         span{
+           font-size: .6em;        
+         }
+         a{
+           padding-left: 25px;
+           font-size: .6em;
+           padding-top: 1px;
+           padding-bottom: 1px;
+
+         }
+       
+       }
+     
+      }
+      
+     }
+     
+     .barGraphWrapper{
+       padding-top: 20px;
+    
+       .domain{
+            stroke-width: 1px;
+            stroke: black;
+            fill: none; 
+        }
+     }
+   }
+    
+  
   }
   
   #bottomControls{
-    margin-top: 200px;
+    margin-top: 10px;
     #sliderPanel{
     
       max-width: 960px;
@@ -163,6 +219,7 @@
     #timeSeriesNames{
       margin-top: 15px;
       width: 900px;
+      
     }
   }
   
@@ -187,6 +244,23 @@
       }
     }
   }
+  
+  #clockImg{
+    z-index: -1;
+    position: relative;
+    max-width: 208px;
+    max-height: 208px;
+    width: 208px;
+    height: 208px;
+    margin-top: -320px;
+    margin-left: 158px;
+    img{
+      max-width: 140px;
+      max-height: 140px;
+    }  
+  }
+
+
 }
 
 #pop-up {
@@ -213,15 +287,4 @@
   }  
 }
 
-#clockImg{
-  z-index: -1;
-  position: relative;
-  margin-top: -427px;
-  margin-left: 376px;
-  img{
-    max-width: 208px;
-    max-height: 208px;
-  }
-  
-  
-}
+

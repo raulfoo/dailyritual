@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  //console.log("loading")
   $("#searchPerson").keyup(function(e){
     search = $(this).val()
     regSearch=RegExp(search,"i")
@@ -26,61 +25,45 @@ $(document).ready(function(){
       
   })
   
- /* $("#searchTableDropDown").on("click","a", function(){
-    searchName = $(this).text() 
-    searchMultipleName(searchName)
-  })*/
   
   $("#content").on("click",".clickName", function(){
     searchName = $(this).text() 
+    $("#holdDropType").val("Category")
     searchMultipleName(searchName)
   })
 
   $(".changeGraph").change(function(){
+    changeGraphFunc($(this))
+    $("#backLevel").fadeOut()
+   
+  })
+ 
+  function changeGraphFunc(d,backButtonPressed){
+    
+    subLevel = $(d).val()
   
-   subLevel = $(this).val()
-   if(subLevel=="-Activity-" || subLevel=="-Occupation-") return
-  
-   if($(this).attr("id")=="categorySelect"){
-    type = "Category"
-    }else{
-    type = "Activity"
+    if($(d).attr("id")=="categorySelect"){
+      type = "Category"
     }
     
-    settings = retrieveOptions(type)
-    if(type == "Category"){
-      options = settings["options"]
-      otherOptions = settings["otherOptions"]
-    }else{
-      otherOptions = settings["options"]
-      options = settings["otherOptions"]
+    if(subLevel=="-Occupation-") {
+      type = "Activity"
+      subLevel = $("#activitySelect").val()
     }
     
-    $("#chosen").html(subLevel)
     $("#holdDropValue").val(subLevel)
     $("#holdDropType").val(type)
+    
+    $("#dateSlider").slider("value",0)
+    singleName = false
+    updateGraphs(testingDat1,backButtonPressed)
 
-    updateGraphs(testingDat1,type,subLevel,options,otherOptions,metric)
-
-  })
+  }
 
   changeGraphType = function(d){
-    //metric = $(this).val()
     type = $("#holdDropType").val()
     subLevel = $("#holdDropValue").val()
-    
-    settings = retrieveOptions(type)
-    if(type == "Category"){
-      options = settings["options"]
-      otherOptions = settings["otherOptions"]
-    }else{
-      otherOptions = settings["options"]
-      options = settings["otherOptions"]
-    }
-    
-    //this currently resets your input data
   
-    metric ="absolute"
     //if($(this).val()==1){
     if(d==0){
      donutChart = true
@@ -88,7 +71,9 @@ $(document).ready(function(){
      donutChart = false   
     }
     
-    updateGraphs(testingDat1,type,subLevel,options,otherOptions,metric)
+    $("#backLevel").fadeOut()
+
+    updateGraphs(filterDat)
   
   }
 
@@ -97,29 +82,41 @@ $(document).ready(function(){
     $("#resetButton").css("visibility","hidden")
     $("#slideVal").html("")
   
-    
     type = $("#holdDropType").val()
     subLevel = $("#holdDropValue").val()
-    
-    
-    settings = retrieveOptions(type)
-    if(type == "Category"){
-      options = settings["options"]
-      otherOptions = settings["otherOptions"]
-    }else{
-      otherOptions = settings["options"]
-      options = settings["otherOptions"]
-    }
   
-    metric ="absolute"
-    
-    updateGraphs(testingDat1,type,subLevel,options,otherOptions,metric)
+    $("#dateSlider").slider("value",0)
+    updateGraphs(testingDat1)
   
   })
+  
+  $("#backLevel").click(function(d){
+    $("#backLevel").fadeOut()
+    changeGraphFunc($(".changeGraph"),true) 
+  
+  })
+ 
 })
 
 function buildSelects(data){
-  //build by category
+
+  topOptionsMapper = {
+    Poet: "Poets",
+    Writer: "Writers",
+    Architect: "Architects",
+    Filmaker: "Filmakers",
+    Artist: "Artists",
+    Philosopher: "Philosophers",
+    Composer: "Composers",
+    Scientist: "Scientists",
+    Working: "working",
+    Walking: "walking",
+    Drinking: "drinking",
+    Sleeping: "sleeping",
+    Visiting: "visiting",
+    Teaching: "teaching"
+  }
+  
   categories = data.map(function(d) {return d.Category})
   categories = _.uniq(categories)
   
@@ -130,61 +127,175 @@ function buildSelects(data){
   index = 0
   topOptions=["-Occupation-","-Activity-"]
   
-
+  
   builds.forEach(function(dat){
-  output = "<option value='"+topOptions[index]+"'>"+topOptions[index]+"</option>"
+    if(index==0){
+      output = "<option value='"+topOptions[index]+"'>"+"Thinkers"+"</option>"
+    }else{
+      output = ""
+    }
+    
     dat.forEach(function(out){
-      output = output+"<option value='"+out+"'>"+out+"</option>"
+      output = output+"<option name='"+out+"' value='"+out+"'>"+((out=="Social Events") ? "at a social event": topOptionsMapper[out])+"</option>"
     })
     elementID = ["#categorySelect","#activitySelect"][index]
     index +=1
-    
     $(elementID).html(output)
 
   })
 }
 
-function buildGraphData(data,pickType,subLevel,options,otherOptions,color){
+function buildGraphData(data){//,pickType,subLevel,options,otherOptions,color){
+    
  
-  activities= options
-  output = []
+  showKind = $("#categorySelect").val()
+  type="Category"
+  if(showKind =="-Occupation-") {
+    type = "Activity"
+    pickType = $("#activitySelect").val()
+  }
   
+  settings = retrieveOptions(type)
+ 
+  if(type == "Category"){
+    options = settings["Category"]
+    otherOptions = settings["Activity"]
+  }else{
+    otherOptions = settings["Category"]
+    options = settings["Activity"]
+  }
+
+  subLevel = type
+ 
+  activities = options
+  output = []
+  allNames = []
+  
+
+  occupation = $("#categorySelect").val()
+  activity = $("#activitySelect").val()
+
   secondLevel = "Activity"
   if(subLevel == "Activity"){
     secondLevel = "Category"
   }
+ 
+  if(occupation != "-Occupation-"){
+    tempDat = data.filter(function(d){
+    return d["Category"] == occupation//generalize this
+  })}else{
+    tempDat = data
+  }
+  
+  if(occupation=="-Occupation-"){
+    tempDat = tempDat.filter(function(d){
+      return d["Activity"] == activity //generalize this
+    })
+  }
 
+  output = createDaySchedule(tempDat,activities,secondLevel,otherOptions)
+ 
+  allNames = _.uniq(allNames)  
+  allNames = allNames.sort(compareLastWord)
+  
+  if(allNames.length>1){
+    allNamesText=""
+    allNames.forEach(function(d){
+      allNamesText = allNamesText+"<a class='clickName'>"+d+"</a><br>"
+    })
+  }else{
+    
+    startingName = allNames
+    linkName = "https://en.wikipedia.org/wiki/"+allNames
+    linkName = linkName.replace(" ","_")
+    allNamesText = "<a class='clickName' href='"+linkName+"' target='_blank'>"+allNames+"</a><br><div id='correlationNav'>"//make link to wiki here
+    activityArray = findCorrelations(output)
+  
+    data = $.extend(testingDat1,[])
+    
+    correlationOutput = createDaySchedule(data,activities,secondLevel,otherOptions)
+
+    allNames = _.uniq(allNames)
+    allNamesArray = []
+    allNames.forEach(function(d){
+      if(d != startingName){
+        allNamesArray.push({name: d, score: 0})
+      }
+    })
+    
+    index= 0
+    activityArray.forEach(function(hour){
+      hour.forEach(function(activityKey){
+        tempSelect = correlationOutput[index][activityKey]
+        tempSelect.forEach(function(match){
+          if(match != startingName){
+            allNamesArray.filter(function(matchPair){ return matchPair.name==match})[0].score += 1
+          }
+        })
+      })
+      index += 1
+    })
+    
+    allNamesArray.sort(compare)
+    
+    allNamesText = allNamesText+"<span> Routine is most similar to:</span><br>"
+    allNamesArray.slice(0,3).forEach(function(d){
+      allNamesText = allNamesText+"<a class='clickName'>"+d.name+"</a><br>"
+    })
+    
+    allNamesText = allNamesText+"<span> Routine is least similar to:</span><br>"
+    
+    lowestMatch = allNamesArray.filter(function(d) {return d.score == 0})
+    if(lowestMatch.length>1){
+      navMatch = []
+      for(i=0;i<1;i++){
+        select = Math.floor(Math.random(0,1)*lowestMatch.length)
+        navMatch.push(lowestMatch[select])  
+      }
+        navMatch.forEach(function(d){
+        allNamesText = allNamesText+"<a class='clickName'>"+d.name+"</a><br>"
+      })
+    }else{
+      allNamesArray.slice(allNames.length-2,allNames.length-1).forEach(function(d){
+        allNamesText = allNamesText+"<a class='clickName'>"+d.name+"</a><br>"
+      })
+    }
+    allNamesText = allNamesText+"</div>" 
+  }
+
+  $("#chosen").html(allNamesText)
+  allOut = output  
+ 
+  return allOut
+}
+
+
+function createDaySchedule(data,activities,secondLevel,otherOptions){
+ 
+  allNames = []
+  functionOutput = []  
   for(j=1;j<=24;j++){
 
     newObj = {}
-  
-    tempDat = data.filter(function(d){
-      return d[subLevel] == pickType //generalize this
-    })
     newObj["TimeZone"] = j
     activities.forEach(function(cat){
       peoples = []
-      tempDat.filter(function(d){
+      data.filter(function(d){
         if(d[secondLevel] == cat && ((parseInt(d.StartGMT) <=j && parseInt(d.StopGMT)>j) || ((parseInt(d.StopGMT) < parseInt(d.StartGMT)) && (j >= parseInt(d.StartGMT) || j < parseInt(d.StopGMT))))){
           peoples.push(d.Name)
-          //pointArray.filter(function(e) { return e.Name==d.Name}).map(function(e) {return e.color = color(cat)})
+          allNames.push(d.Name)            
         }
       })
       newObj[cat] = peoples
     })
-    
     otherOptions.forEach(function(d){
       newObj[d] = []
-    
     })
-    
-    output.push(newObj)
+    functionOutput.push(newObj)
   }
-  //return a second array of names, lat lng activity for the map points
-  allOut = output  
-  return allOut
-
+  return functionOutput
 }
+
 
 function filterByDate(activityData,lifeData,date){
 
@@ -193,7 +304,6 @@ function filterByDate(activityData,lifeData,date){
       return e
     }
   }).map(function(e){ return e.Name})
-  
   
   output = activityData.filter(function(e){
     if(selection.indexOf(e.Name)>=0){
@@ -205,88 +315,100 @@ function filterByDate(activityData,lifeData,date){
 
 }
 
-function relativeAbundance(data,type,subLevel){
-
-    optionTimes = {}
-    otherOptions.forEach(function(e){
-      optionTimes[e]=0
-    })
+function relativeAbundance(data,type,subLevel,sendOptions){
+    
+  occupation = $("#categorySelect").val()
+  optionTimes = {}
+  sendOptions.forEach(function(e){
+    optionTimes[e]=0
+  })
   
   total = 0
 
-  if(type=="Activity"){
-    data.forEach(function(e){
-      if(parseInt(e.StartGMT)<parseInt(e.StopGMT)){
-        time = parseInt(e.StopGMT)-parseInt(e.StartGMT)
-      }else{
-        time = parseInt(24-e.StartGMT)+parseInt(e.StopGMT)
-      }
-      
-      optionTimes[e.Activity] += time
-      total += time
-    })
+  data.forEach(function(e){
+    if(parseInt(e.StartGMT)<parseInt(e.StopGMT)){
+      time = parseInt(e.StopGMT)-parseInt(e.StartGMT)
+    }else{
+      time = parseInt(24-e.StartGMT)+parseInt(e.StopGMT)
+    }
+    
+    optionTimes[e.Activity] += time
+    total += time
+  })
   
-  }else{
-     nameArray = []
-     data.forEach(function(e){
-      if(nameArray.indexOf(e.Name)<0){
-        nameArray.push(e.name)
-        optionTimes[e.Category] += 1
-        total += 1
-      }
-      
-    })
-  }
-  
+ 
   subLevelTime = optionTimes[subLevel]
   percent = subLevelTime/total
 
+  if(subLevel == "-Occupation-") percent = 1
   return percent
 
 }
 
 
-buildLineGraphDat = function(data){
+buildLineGraphDat = function(data,subLevel){
   
+  occupation = $("#categorySelect").val()
+  activity = $("#activitySelect").val()
   lineDat = []
-  for(i=minSlide;i<=maxSlide;i++){
-    yearDat = filterByDate(data,tempDates,i)
-    if(yearDat.length==0){
-      percent = 0
-      people = []
-    }else{
-      percent = relativeAbundance(yearDat,type,subLevel)
-      people = _.uniq(yearDat.filter(function(y){ if(y[type]==subLevel) return y}).map(function(z) {return z.Name}))
-
-    }
-    lineDat.push({date: i, close: percent, people: people})
-    
+  
+  settings = retrieveOptions(type)
+  if(type=="Category"){
+    sendOptions = settings["Activity"]
+  }else{
+    sendOptions = settings["Category"]
   }
   
-  
+  if(occupation != "-Occupation-"){
+    data=data.filter(function(d){
+      return d.Category==occupation
+    })
+  }
+
+  lineDat = createLineDat(data,tempDates,type,activity,sendOptions,occupation)
+
   buildTimeSeries(lineDat)
 }
 
+updateLineGraph = function(data,subLevel){
 
-updateLineGraph = function(data){
+  occupation = $("#categorySelect").val()
+  activity = $("#activitySelect").val()
   
-
-  lineDat = []
-  for(i=minSlide;i<=maxSlide;i++){
-    yearDat = filterByDate(data,tempDates,i)
-    if(yearDat.length==0){
-      percent = 0
-      people= []
-    }else{
-      percent = relativeAbundance(yearDat,type,subLevel)
-      people = _.uniq(yearDat.filter(function(y){ if(y[type]==subLevel) return y}).map(function(z) {return z.Name}))
-
-    }
-    lineDat.push({date: i, close: percent, people: people})
+  if(occupation != "-Occupation-"){
+    data=data.filter(function(d){
+      return d.Category==occupation
+    })
   }
   
+  settings = retrieveOptions(type)
+  if(type=="Category"){
+    sendOptions = settings["Category"]
+  }else{
+    sendOptions = settings["Activity"]
+  }
+  
+  lineDat = createLineDat(data,tempDates,type,activity,sendOptions,occupation)
   updateTimeSeries(lineDat)
 
+}
+
+function createLineDat(data,tempDates,type,activity,sendOptions,occupation){
+  lineDat = []
+  for(i=minSlide;i<=maxSlide;i++){
+      yearDat = filterByDate(data,tempDates,i)
+      if(yearDat.length==0){
+        percent = 0
+        people = []
+      }else{
+        percent = relativeAbundance(yearDat,type,activity,sendOptions)
+        //people = _.uniq(yearDat.filter(function(y){ if(y[type]==subLevel) return y}).map(function(z) {return z.Name}))
+        people = _.uniq(yearDat.filter(function(y){ if((y["Category"]==occupation || occupation=="-Occupation-") && y["Activity"]==activity) return y}).map(function(z) {return z.Name}))
+      }
+      lineDat.push({date: i, close: percent, people: people})
+    }
+
+  return lineDat
 }
 
 
@@ -304,25 +426,23 @@ clickLegend = function(d){
   subLevel = d
   $("#holdDropValue").val(subLevel)
   
-  settings = retrieveOptions(type)
-  if(type == "Category"){
-    options = settings["options"]
-    otherOptions = settings["otherOptions"]
-  }else{
-    otherOptions = settings["options"]
-    options = settings["otherOptions"]
-  }
-  
-  
-  metric ="absolute"
+ 
   $("#chosen").html(subLevel)
 
-  updateGraphs(testingDat1,type,subLevel,options,otherOptions,metric)
+  $("#dateSlider").slider("value",0)
+  updateGraphs(testingDat1)
 
 }
 
-searchNamesFunc = function(d){  
-  searchMultipleName(d.people)
+searchNamesFunc = function(d){ 
+  
+  if(d.people.length==1 && singleName==true){
+    $("#activitySelect")
+      .val(d.name)
+      .trigger('change')
+  }else{
+    searchMultipleName(d.people)
+  }
 }
 
 searchMultipleName = function(searchName){
@@ -340,22 +460,15 @@ searchMultipleName = function(searchName){
     
     type = "Category"
     $("#holdDropType").val(type)
+    $("#holdDropValue").val(tempDat[0].Category)
+    $("#categorySelect").find("[name="+tempDat[0].Category+"]").attr("selected","selected")
     
-    settings = retrieveOptions(type)
-    if(type == "Category"){
-      options = settings["options"]
-      otherOptions = settings["otherOptions"]
-    }else{
-      otherOptions = settings["options"]
-      options = settings["otherOptions"]
-    }
-    
+   
     allNames = _.uniq(allNames)
     if(allNames.length>1){
       allNamesText=""
       allNames.forEach(function(d){
         allNamesText = allNamesText+"<a class='clickName'>"+d+"</a><br>"
-      
       })
    
     
@@ -363,11 +476,14 @@ searchMultipleName = function(searchName){
       allNamesText = allNames
     }
    // allNames = _.uniq(allNames).join(", <br>")
-   
-    metric ="absolute"
     //put a dynamic font changer here to fit all input in box
     $("#chosen").html(allNamesText)
-
+    
+    if(allNames.length==1) {
+      singleName=true
+      }else{
+      singleName=false
+      }
 
     temp = tempDates.filter(function(e){
       return searchName.indexOf(e.Name)>-1
@@ -375,16 +491,17 @@ searchMultipleName = function(searchName){
     
     temp = temp[0]
     newVal = parseInt(temp.Stop)-((parseInt(temp.Stop)-parseInt(temp.Start))/2)
-    //alert(newVal)
     $("#dateSlider").slider("value",newVal)
     $("#searchTableDropDown").html("")
-    updateGraphs(tempDat,type,subLevel,options,otherOptions,metric)
+    
+    $("#backLevel a").text("View all "+$("#categorySelect").val().toLowerCase()+"s")
+    $("#backLevel").fadeIn()
+    updateGraphs(tempDat)
   
-
 }
 
 
-retrieveOptions = function(type){
+function retrieveOptions(type){
     
     options = $.map($("#activitySelect option") ,function(option) {
       if(option.value!="-Activity-" && option.value!="-Occupation-" ){
@@ -398,12 +515,31 @@ retrieveOptions = function(type){
       }
     });
    
-    return {"options": options, "otherOptions": otherOptions}
+    return {"Category": options, "Activity": otherOptions}
 
 }
 
 
+function findCorrelations(data){
 
+  //get an array of the activity done for each hour by person of interest
+  activityArray = []
+  index = 0
+  data.filter(function(d){
+    activityArray.push([])
+    options.forEach(function(opt){
+      if(d[opt].length>0){
+        activityArray[index].push(opt)
+      }
+    })
+    index += 1
+  
+  })
+  
+  return activityArray
+  
+  //now go through a complete hour by hour schedule for all activities/occupations
+}
 /*
 function setCurrentTime(arrowVal,baseMapWidth){
 
@@ -588,5 +724,15 @@ function buildGraphData(data,currentHour,chooseActivity,color){
 */
 
 
+compareLastWord = function(a,b){
+  aLast = a.match(/[A-z-]*$/)
+  bLast = b.match(/[A-z-]*$/)
+  if([aLast,bLast].sort()[0] == aLast){
+    return -1
+    }else{
+    return 1
+    }
+
+}
 
 //should also have a graph where you can choose activity, and then shows how many/which people were doing that activity (sleep, awake, working, drinking) in each artist/scientist category for that timezone

@@ -1,7 +1,6 @@
 function mover(d) {
 
   testingClick = d
- // locationMouse = [e.clientX+window.pageXOffset,e.clientY+window.pageYOffset] 
   
   locationMouse = [d3.event.pageX,d3.event.pageY]
   trans = [0,0]
@@ -18,7 +17,13 @@ function mover(d) {
           progDisplay =[""]
     }
   
+  if(d.timeZone == -99){
+    time=""
+    
+    progDisplay = [progDisplay]
+  }
   
+  progDisplay = progDisplay.sort(compareLastWord)
   displayOut = "<table>"
   for(i = 0; i<progDisplay.length;i++){
     temp = progDisplay[i]
@@ -27,7 +32,7 @@ function mover(d) {
   displayOut = displayOut+"</table>"
   
   $("#descRightContent").html(displayOut)
-  $("#pop-up").fadeOut(100,function () {
+  $("#pop-up").fadeOut(0,function () {
     if(scale == null){
       scale = 1
       }
@@ -54,7 +59,7 @@ function mover(d) {
   
     $("#pop-up").css({"left":popLeft,"top":popTop});
     if(progDisplay.length>0){
-      $("#pop-up").fadeIn(10);
+      $("#pop-up").fadeIn(0);
     }
   });
 

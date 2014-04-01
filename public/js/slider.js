@@ -11,9 +11,9 @@ $(document).ready(function(){
         changeGraphType(ui.value)
 
         if(ui.value==1){
-          $("#clockImg").fadeIn(1000)
+          $("#clockImg img").fadeIn(1000)
         }else{
-          $("#clockImg").fadeOut()
+          $("#clockImg img").fadeOut()
 
         }
      
@@ -30,10 +30,18 @@ $(document).ready(function(){
         $("#resetButton").css("visibility","visible")
       },
       change: function( event, ui ) {
+        $("#slideVal").text(ui.value)
+        if(ui.value==$("#dateSlider").slider("option","min")){
+            $("#slideVal").text("")
+        }
+
         if (event.originalEvent) {
+          singleName = false
+
           yearDat = filterByDate(testingDat1,tempDates,ui.value)
-    
-          updateGraphs(yearDat,type,subLevel,options,otherOptions,metric)
+         
+          updateGraphs(yearDat)
+         // $("#chosen").html(subLevel)
         }
       }
     });
