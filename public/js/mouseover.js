@@ -1,5 +1,10 @@
-function mover(d) {
-
+function mover(d,obj,clock) {
+  
+  clock = false || clock
+  if(clock){
+    d3.select(obj.parentNode.appendChild(obj)).style({'stroke-width':'3px','stroke':'#d3d3d3'})//.parentNode.appendChild(obj)).transition().duration(300)
+       }
+  
   testingClick = d
   
   locationMouse = [d3.event.pageX,d3.event.pageY]
@@ -19,11 +24,14 @@ function mover(d) {
   
   if(d.timeZone == -99){
     time=""
-    
     progDisplay = [progDisplay]
   }
   
   progDisplay = progDisplay.sort(compareLastWord)
+  if(singleName==true && d.timeZone!=-99 && d.people.length>0){
+    progDisplay = ["Click to view times spent "+String(d.name).toLowerCase()+" for all "+$("#categorySelect option:selected").text().toLowerCase()]
+  }
+
   displayOut = "<table>"
   for(i = 0; i<progDisplay.length;i++){
     temp = progDisplay[i]
@@ -45,12 +53,12 @@ function mover(d) {
     var popTop = (locationMouse[1]-trans[1])*scale//+220;
     
     leftChange = 50
-    if(locationMouse[0]>760){
+    if(locationMouse[0]>560){
       leftChange = -300  
     }
     
     topChange = 50
-    if(popTop>480){
+    if(popTop>380){
       topChange = -100
     }
     
@@ -65,7 +73,9 @@ function mover(d) {
 
 }
 
-function mout(d) {
+function mout(d,obj) {
+  
+   d3.select(obj).style({'stroke-width':'1px','stroke':'black'})
    $(".description").css("visibility","hidden")
    $("#pop-up").fadeOut(0);
   

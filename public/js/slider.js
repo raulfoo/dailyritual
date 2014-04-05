@@ -16,7 +16,6 @@ $(document).ready(function(){
           $("#clockImg img").fadeOut()
 
         }
-     
       }
     });
     
@@ -28,6 +27,7 @@ $(document).ready(function(){
       slide: function( event, ui ) {
         $("#slideVal").text(ui.value)
         $("#resetButton").css("visibility","visible")
+        
       },
       change: function( event, ui ) {
         $("#slideVal").text(ui.value)
@@ -41,6 +41,10 @@ $(document).ready(function(){
           yearDat = filterByDate(testingDat1,tempDates,ui.value)
          
           updateGraphs(yearDat)
+          
+          $("#backLevel a").text("View all "+$("#categorySelect").val().toLowerCase()+"s")
+          $("#backLevel").fadeIn()
+
          // $("#chosen").html(subLevel)
         }
       }

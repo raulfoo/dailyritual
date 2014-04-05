@@ -20,6 +20,7 @@ $(document).ready(function(){
     
     if(e.keyCode == 13){
       searchName = $("#searchTableDropDown").find("a").eq(0).text() 
+      if(searchName=="No matches in database") return
       searchMultipleName(searchName)
     }
       
@@ -29,6 +30,8 @@ $(document).ready(function(){
   $("#content").on("click",".clickName", function(){
     searchName = $(this).text() 
     $("#holdDropType").val("Category")
+    if(searchName=="No matches in database") return
+
     searchMultipleName(searchName)
   })
 
@@ -57,6 +60,8 @@ $(document).ready(function(){
     $("#dateSlider").slider("value",0)
     singleName = false
     updateGraphs(testingDat1,backButtonPressed)
+    $("#resetButton").css("visibility","hidden")
+
 
   }
 
@@ -87,6 +92,9 @@ $(document).ready(function(){
   
     $("#dateSlider").slider("value",0)
     updateGraphs(testingDat1)
+    
+    $("#backLevel").fadeOut()
+
   
   })
   
@@ -208,7 +216,7 @@ function buildGraphData(data){//,pickType,subLevel,options,otherOptions,color){
     startingName = allNames
     linkName = "https://en.wikipedia.org/wiki/"+allNames
     linkName = linkName.replace(" ","_")
-    allNamesText = "<a class='clickName' href='"+linkName+"' target='_blank'>"+allNames+"</a><br><div id='correlationNav'>"//make link to wiki here
+    allNamesText = "<a id='currentViewingName' class='clickName' href='"+linkName+"' target='_blank'>"+allNames+"</a><br><div id='correlationNav'>"//make link to wiki here
     activityArray = findCorrelations(output)
   
     data = $.extend(testingDat1,[])
@@ -262,7 +270,7 @@ function buildGraphData(data){//,pickType,subLevel,options,otherOptions,color){
     }
     allNamesText = allNamesText+"</div>" 
   }
-
+  
   $("#chosen").html(allNamesText)
   allOut = output  
  
@@ -364,7 +372,7 @@ buildLineGraphDat = function(data,subLevel){
       return d.Category==occupation
     })
   }
-
+  
   lineDat = createLineDat(data,tempDates,type,activity,sendOptions,occupation)
 
   buildTimeSeries(lineDat)
@@ -388,12 +396,15 @@ updateLineGraph = function(data,subLevel){
     sendOptions = settings["Activity"]
   }
   
+  if(occupation == "-Occupation-") sendOptions = settings["Category"]
+  
   lineDat = createLineDat(data,tempDates,type,activity,sendOptions,occupation)
   updateTimeSeries(lineDat)
 
 }
 
 function createLineDat(data,tempDates,type,activity,sendOptions,occupation){
+
   lineDat = []
   for(i=minSlide;i<=maxSlide;i++){
       yearDat = filterByDate(data,tempDates,i)
@@ -489,12 +500,17 @@ searchMultipleName = function(searchName){
       return searchName.indexOf(e.Name)>-1
     })
     
+    
+    if(temp.length<1) {
+      temp = [{Name: searchName, Start:minSlide, Stop:maxSlide}]
+      }
+        
     temp = temp[0]
     newVal = parseInt(temp.Stop)-((parseInt(temp.Stop)-parseInt(temp.Start))/2)
     $("#dateSlider").slider("value",newVal)
     $("#searchTableDropDown").html("")
     
-    $("#backLevel a").text("View all "+$("#categorySelect").val().toLowerCase()+"s")
+    $("#backLevel a").text("View all "+$("#categorySelect option:selected").text())
     $("#backLevel").fadeIn()
     updateGraphs(tempDat)
   

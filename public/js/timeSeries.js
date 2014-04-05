@@ -1,4 +1,3 @@
-
 buildTimeSeries = function(data){
   var margin = {top: 20, right: 20, bottom: 30, left: 50},
       width = 960 - margin.left - margin.right,
@@ -153,13 +152,10 @@ buildTimeSeries = function(data){
     mover(temp)
   }
   
-  
-
-
-
 }
 
 updateTimeSeries = function(data){
+
 
   var margin = {top: 20, right: 20, bottom: 30, left: 50},
       width = 960 - margin.left - margin.right,
@@ -212,8 +208,7 @@ updateTimeSeries = function(data){
   
   
   }
-  
-      
+     
    var line = d3.svg.line()
       .x(function(d) { return x(d.date); })
       .y(function(d) { return y(d.close); });
@@ -249,7 +244,6 @@ updateTimeSeries = function(data){
         
   svg.selectAll(".yAxisLabel").text("Relative Abundance: "+  $("#categorySelect option:selected").text()+", "+$("#activitySelect option:selected").text())
         
-     
   d3.select(".focus").remove()   
         
   var focus = svg.append("g")
@@ -311,29 +305,4 @@ updateTimeSeries = function(data){
     mover(temp)
   }
       
-      /*
-      
-      .on("mousemove", mousemove); //(data,x,y)
-      
-      
-
-  function mousemove() {
-    bisectDate = d3.bisector(function(d) { return d.date; }).left
-  
-    var x0 = x.invert(d3.mouse(this)[0]),
-        i = bisectDate(data, x0, 1),
-        d0 = data[i - 1],
-        d1 = data[i],
-        d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-    focus.attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
-    temp = $.extend({},yLabelDescObj)
-    temp["name"] = d.year
-    temp["people"] = d.people.join(", ")
-  //  temp["close"] = Math.round(parseInt(d.close()*100)+"%"
-    mover(temp)
-    
-    //$("#timeSeriesNames").text(d.people.join(", "));
-  }
-
-*/
 }

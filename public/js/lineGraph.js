@@ -1,4 +1,4 @@
-var width = 960,
+var width = 560,
       height = 465,
       scale,
       trans=[0,0],
@@ -60,19 +60,20 @@ d3.json("json/activityDat.json", function(error, data) {
     var svg = d3.select(elementChoose[i]).append("svg")
         .attr("width", width)
         .attr("height", 700)
+        .attr("viewBox","-230 200 600 600").attr("width",1000)
       .append("g")
-        .attr("transform", "translate(230,-190)")// rotate("+((15*i)+7.5)+" 0,960)"; })
+        //.attr("transform", "translate(230,-190)")// rotate("+((15*i)+7.5)+" 0,960)"; })
         .attr("class","stateWrapper")
         
     svg.selectAll("image").data(["/images/dayNightCycleSmall.png"]).enter().append("svg:image")
-     .attr("transform", "translate(-71,571)")// rotate("+((15*i)+7.5)+" 0,960)"; })
-     .attr('width', 140)
-     .attr('height', 140)
+     .attr("transform", "translate(-69,535)")// rotate("+((15*i)+7.5)+" 0,960)"; })
+     .attr('width', 135)
+     .attr('height', 135)
      .attr("xlink:href","/images/dayNightCycleSmall.png")
       
      margin = {top: 0, right: 0, bottom: 0, left: 0},
-        width = 640 - margin.left - margin.right,
-        height = 640 - margin.top - margin.bottom;
+        width = 600 - margin.left - margin.right,
+        height = 600 - margin.top - margin.bottom;
     
       x = d3.scale.ordinal()
         .rangeRoundBands([0, width], .1);
@@ -141,15 +142,15 @@ d3.json("json/activityDat.json", function(error, data) {
           .style("fill", function(d) { return convertColor(color(d.name),d.people.length,d3.max(data, function(d) { return d.total; })); })
           .style("fill-opacity", function(d) {return (d.people.length/Math.max(maxObj[d.name],1)) })
           .style("stroke", "black" )
-          .on("mouseover", function(d){ mover(d)})
-          .on("mouseout", function(d){ mout(d)})
-          .on("click", function(d){  searchNamesFunc(d)})
+          .on("mouseover", function(d){ mover(d,this,true) })
+          .on("mouseout", function(d){ mout(d,this) })
+          .on("click", function(d){  if(d.people.length>0) searchNamesFunc(d)})
                
       var legend = svg.selectAll(".legend")
           .data(options.slice().reverse())
         .enter().append("g")
           .attr("class", "legend")
-          .attr("transform", function(d, i) { return "translate(-410," + ((i * 20) + 410) +")"; });
+          .attr("transform", function(d, i) { return "translate(-350," + ((i * 20) + 350) +")"; });
     
       legend.append("rect")
           .attr("class","legendRect")
@@ -167,14 +168,13 @@ d3.json("json/activityDat.json", function(error, data) {
           
     buildLineGraphDat(testingDat1,$("#activitySelect").val())
     
-    plotBar([{letter: "A", score: 0}],"topBar")
-    plotBar([{letter: "A", score: 0}],"botBar")
-    $("#content").fadeIn(0)
+    plotBar([{letter: "A", score: 3}],"topBar")
+    plotBar([{letter: "A", score: 3}],"botBar")
+    $("#content").css("visibility","visible")
+    $("#footer").fadeIn(0)
        
     }); 
 });
-  
-
   
 function updateGraphs(data,backButtonPressed){
     backButtonPressed = backButtonPressed || false
@@ -213,7 +213,8 @@ function updateGraphs(data,backButtonPressed){
     data.forEach(function(d) {
       var y0 = 0; 
       d.ages = color.domain().map(function(name) { return {width: (Math.PI*2)/24, name: name, people: d[name], y0: y0, y1: (((occupation == "-Occupation-" && options.indexOf(name)>-1) || (name==activity && singleName==false && occupation != "-Occupation-") || (singleName==true && d[name].length>0)) ? y0 += 3:  y0), rotateAngle: (index*15), percentage:0 }}); //(options.indexOf(name)>-1 ? y0 += 3:  y0)  options.indexOf(name)>-1
-
+      
+      if(d.ages[d.ages.length-1].y1==0) d.ages[d.ages.length-1].y1=3
       d.total = d.ages[d.ages.length - 1].y1;
       index = index+1
     });
@@ -224,13 +225,15 @@ function updateGraphs(data,backButtonPressed){
     y.domain([0,1.5]);
     
    maxObj = {}
-   options.forEach(function(opt){
+   fillOptions = options
+   
+   fillOptions.forEach(function(opt){
      maxObj[opt] = 0
    })
     
     checkDat = data
     data.forEach(function(d){
-      options.forEach(function(opt){
+      fillOptions.forEach(function(opt){
         if(maxObj[opt] < d[opt].length){
           maxObj[opt] = d[opt].length
         }
@@ -240,7 +243,7 @@ function updateGraphs(data,backButtonPressed){
   
     if(backButtonPressed){
      d3.select(elementChoose[i]).selectAll(".stateWrapper").transition().duration(400).delay(0)
-      .attr("transform","translate(-450,-190)")
+      .attr("transform","translate(-450,0)")
       }
              
     //get selected activities(to restrict the legend)
@@ -253,22 +256,37 @@ function updateGraphs(data,backButtonPressed){
         }
       })
     })
-    
+        
     didActivities = _.uniq(didActivities)
     
+    if(occupation=="-Occupation-"){
+      //d3.select(elementChoose[i]).select("svg").transition().duration(300).attr("viewBox","0 100 570 570").attr("width",1000)//.attr("transform","translate(430,0)")
+      //$("#rightSideDisplay").css("opacity",0)
+    }else{
+     // d3.select(elementChoose[i]).select("svg").transition().duration(300).attr("viewBox","0 30 650 650").attr("width",width)
+      d3.select(elementChoose[i]).select("svg").transition().duration(300).attr("viewBox","-230 200 600 600").attr("width",width)        
+
+      $("#rightSideDisplay").css("opacity",1)
+      $("#rightSideDisplay").css("width","100%")
+      $("#chosen").css("width", "300px");
+      $("#clockActivity").css("width","550px")
+
+      }
     divideTotal = 3
     state =  d3.select(elementChoose[i]).selectAll(".state")
       .data(data).selectAll("path")
       .data(function(d){ return d.path}).transition().delay(200)  //attr("transform", function(d, i) { return "translate(" + "480" + ",-580) rotate("+((d.ages[d.ages.length-1].rotateAngle)+7.5)+" 0,960)"; })
         .attr("d",function(d){ return d.path})
         .style("fill", function(d) { return convertColor(color(d.name),d.people.length,d3.max(data, function(d) { return d.total; })); })
-        .style("fill-opacity", function(d) {return (d.people.length/Math.max(maxObj[d.name],1)) })
+        .style("fill-opacity", function(d) {return (d.people.length/Math.max((maxObj[d.name]==undefined)? 0:maxObj[d.name],1)) })
         .style("stroke", "black" )
      
      
     if(backButtonPressed){      
      d3.select(elementChoose[i]).selectAll(".stateWrapper").transition().duration(200).delay(400)
-      .attr("transform","translate(230,-190)")// rotate("+((15*i)+7.5)+" 0,960)"; })
+      .attr("transform","translate(0,0)")
+
+      //.attr("transform","translate(230,-190)")// rotate("+((15*i)+7.5)+" 0,960)"; })
     }
     
     d3.select(elementChoose[i]).selectAll(".legend").remove()    
@@ -278,7 +296,7 @@ function updateGraphs(data,backButtonPressed){
           .data(didActivities.slice().reverse())
         .enter().append("g")
           .attr("class", "legend")
-          .attr("transform", function(d, i) { return "translate(-410," + ((i * 20) + 410) +")"; });
+          .attr("transform", function(d, i) { return "translate(-350," + ((i * 20) + 350) +")"; });
     
       legend.append("rect")
           .attr("class","legendRect")
@@ -301,7 +319,7 @@ function updateGraphs(data,backButtonPressed){
     
     $(".barGraphWrapper").css("visibility","visible")
     createBarGraphs(testingDat1,filterDat,activity,occupation)
-  
+      
 }
 
 function convertY(input){
