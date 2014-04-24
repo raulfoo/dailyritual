@@ -1,8 +1,10 @@
 function mover(d,obj,clock) {
   
+
   clock = false || clock
-  if(clock){
+  if(clock && d.people.length>0){
     d3.select(obj.parentNode.appendChild(obj)).style({'stroke-width':'3px','stroke':'#d3d3d3'})//.parentNode.appendChild(obj)).transition().duration(300)
+    $(obj).css("cursor","pointer")  
        }
   
   testingClick = d

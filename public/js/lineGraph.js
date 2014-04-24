@@ -59,17 +59,17 @@ d3.json("json/activityDat.json", function(error, data) {
     data = $.extend([],graphingDat)
     var svg = d3.select(elementChoose[i]).append("svg")
         .attr("width", width)
-        .attr("height", 700)
+        .attr("height", 750)
         .attr("viewBox","-230 200 600 600").attr("width",1000)
       .append("g")
         //.attr("transform", "translate(230,-190)")// rotate("+((15*i)+7.5)+" 0,960)"; })
         .attr("class","stateWrapper")
         
-    svg.selectAll("image").data(["/images/dayNightCycleSmall.png"]).enter().append("svg:image")
-     .attr("transform", "translate(-69,535)")// rotate("+((15*i)+7.5)+" 0,960)"; })
+    svg.selectAll("image").data(["/images/dayNightCyc.png"]).enter().append("svg:image")
+     .attr("transform", "translate(-68,533)")// rotate("+((15*i)+7.5)+" 0,960)"; })
      .attr('width', 135)
      .attr('height', 135)
-     .attr("xlink:href","/images/dayNightCycleSmall.png")
+     .attr("xlink:href","/images/dayNightCyc.png")
       
      margin = {top: 0, right: 0, bottom: 0, left: 0},
         width = 600 - margin.left - margin.right,

@@ -37,7 +37,10 @@ $(document).ready(function(){
 
   $(".changeGraph").change(function(){
     changeGraphFunc($(this))
-    $("#backLevel").fadeOut()
+   // $("#backLevel").fadeOut()
+    $("#backLevel").animate({"opacity": 0},"fast",function(){
+      $("#backLevel").css("visibility","hidden")
+    })
    
   })
  
@@ -76,7 +79,10 @@ $(document).ready(function(){
      donutChart = false   
     }
     
-    $("#backLevel").fadeOut()
+  
+    $("#backLevel").animate({"opacity": 0},"fast",function(){
+      $("#backLevel").css("visibility","hidden")
+    })
 
     updateGraphs(filterDat)
   
@@ -93,13 +99,18 @@ $(document).ready(function(){
     $("#dateSlider").slider("value",0)
     updateGraphs(testingDat1)
     
-    $("#backLevel").fadeOut()
+    
+    $("#backLevel").animate({"opacity": 0},"fast",function(){
+      $("#backLevel").css("visibility","hidden")
+    })
 
   
   })
   
   $("#backLevel").click(function(d){
-    $("#backLevel").fadeOut()
+     $("#backLevel").animate({"opacity": 0},"fast",function(){
+      $("#backLevel").css("visibility","hidden")
+    })
     changeGraphFunc($(".changeGraph"),true) 
   
   })
@@ -511,7 +522,9 @@ searchMultipleName = function(searchName){
     $("#searchTableDropDown").html("")
     
     $("#backLevel a").text("View all "+$("#categorySelect option:selected").text())
-    $("#backLevel").fadeIn()
+     $("#backLevel").animate({"opacity": 1},"fast",function(){
+      $("#backLevel").css("visibility","visible")
+    })
     updateGraphs(tempDat)
   
 }

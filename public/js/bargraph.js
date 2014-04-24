@@ -99,7 +99,7 @@ plotBar = function(barData,svgName){
   var yAxis = d3.svg.axis()
       .scale(y)
       .orient("left")
-      .ticks(10);
+      .ticks(5);
   
   //var svg = d3.select(".barGraphWrapper").append("svg")
   var svg = d3.select(".barGraphWrapper").append("svg")
@@ -179,7 +179,7 @@ function updateBar(barData,svgName){
   var yAxis = d3.svg.axis()
       .scale(y)
       .orient("left")
-      .ticks(10);
+      .ticks(5);
       
    x.domain(barData.map(function(d) { return d.letter; }));
    y.domain([0, d3.max(barData, function(d) { return d.score; })]);
@@ -236,9 +236,9 @@ function updateBar(barData,svgName){
         .attr("transform","rotate(-45)")
   
   if(svgName==".topBar"){
-    titleText = "Hours spent "+$("#activitySelect option:selected").text()+" by profession"
+    titleText = "Hours spent "+$("#activitySelect option:selected").text()+", by profession"
   }else{
-    titleText = "How your selection spends there time"
+    titleText = "How your selection spends their time"
   }
     
   svg.selectAll(".chartTitle").selectAll("text")
