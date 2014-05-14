@@ -64,7 +64,7 @@ d3.json("json/activityDat.json", function(error, data) {
         //.attr("transform", "translate(230,-190)")// rotate("+((15*i)+7.5)+" 0,960)"; })
         .attr("class","stateWrapper")
         
-    svg.selectAll("image").data(["/images/24hourClock_Full.png"]).enter().append("svg:image")
+    svg.selectAll("image").data(["/images/24HourClock_Full.png"]).enter().append("svg:image")
      .attr("transform", "translate(-90,510)")// rotate("+((15*i)+7.5)+" 0,960)"; })
     /* .attr('width', 135)
      .attr('height', 135)*/
