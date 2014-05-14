@@ -1,5 +1,11 @@
 @import "css/mixins";
 
+#preloader{
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+
 .barGraphWrapper{
 
   visibility: hidden;
@@ -62,53 +68,37 @@
     max-width: 960px;
     
     #filters{
+     
       position: relative;
       margin-top: 20px;
       z-index: 200;
-      margin-left: 20px;
-      max-width: 570px;
+      padding-left: 20px;
+      max-width: 100%;
+      min-width: 100%;
+      width: 100%;
+      margin-bottom: 15px;
+      font-size: 1.5em;
       
       span{
         font-size: 2em;
       }
       
       select{
-        font-size: 2em;
+        font-size: 1em;
+        line-height: 2em;
+        height: 2em;
+        vertical-align: middle;
+        background:#f4f4f4;
+        display: inline;
+        margin-bottom: 10px;
+        position: relative;
       }
       
       input{
-        margin: 15px;
+        
+        font-size: 2em;
+        
       }
-      
-      input[type="text"]{
-        padding: 10px;
-        min-width: 175px;
-        width: 175px;
-      }
-      
-       #searchPersonDiv{
-    
-       input{
-          margin: 15px;
-        }
-        
-        input[type="text"]{
-          padding: 10px;
-          min-width: 175px;
-          width: 175px;
-        }
-        
-      
-        table{
-          position: absolute;
-          max-height: 150px;
-          
-          .clickName{
-            font-size: 1.5em;
-          }
-        
-        }
-      } 
     }
   }
   
@@ -120,13 +110,25 @@
     #leftSideDisplay{
       display: table-cell;
       
+      #filterInstruction{
+        color: red;
+        font-size: 1.5em;
+        display: none;
+        left: -125px;
+        top: -50px;
+        width: 400px;
+        position: absolute;
+      
+      }
+      
       
       #clockActivity{
         position: relative;
         margin-top: -170px;
         margin-top: -210px;
         max-width: 960px;
-        min-height: 600px;
+        min-height: 500px;
+        max-height: 500px;
         width: 960px;
         
         path{
@@ -136,11 +138,21 @@
       }
       
       #backLevel{
-        margin-top: 100px;
+        margin-top: 300px;
+       
+        position: absolute;
         visibility: hidden;
+        z-index: 200;
         a{
           padding: 15px;
         }
+      }
+      
+      #resetButton{
+        margin-top: 355px;
+        position: absolute;
+        visibility: hidden;
+        padding: 15px;
       }
     }
     
@@ -156,18 +168,63 @@
 
     
     #chosenWrapper{
-      margin-left: 120px;
-      margin-top: -90px;
+      /*margin-left: 120px;*/
+    
       z-index: 300;
       position: relative;
+      min-height: 200px;
+      min-width: 400px;
+      border-style: solid;
+      border-color: grey;
+      border-width: 1px;
+      padding-top: 10px;
+      
+       #searchPersonDiv{
+       
+       span{
+        font-size: 2.2em;
+        margin-left: 5px;
+       }
+        
+        input[type="text"]{
+          padding: 10px;
+          min-width: 175px;
+          width: 175px;
+          display: inline;
+          float: right;
+          margin-right: 5px;
+          text-align: right;
+        }
+        
+      
+        table{
+          position: absolute;
+          max-height: 150px;
+          left: 195px;
+          top: 50px;
+          text-align: right;
+          
+          max-width: 200px;
+          width: 200px;
+          background-color: $lightestGray;
+          
+          .clickName{
+            font-size: 1.5em;
+            margin: 5px;
+          }
+        
+        }
+      } 
+    
           
       #chosen{
        overflow: auto;
-       width: 0px;
+       width: 395px;
        height: 200px;
        font-size: 2em;
        word-wrap: break-word;
        z-index: 300;
+       padding-left: 5px;
        
       #currentViewingName{
         font-size: 1.3em;
@@ -211,15 +268,16 @@
     margin-top: 10px;
     #sliderPanel{
     
-      max-width: 960px;
-      width: 960px;
+      min-width: 100%;
+      max-width: 100%;
+      width: 100%;
       z-index: 200;
       
       #dateSlider{
         height: 10px;
         min-height: 10px;
-        margin-left: 50px;
-        width: 900px;
+        margin-left: 40px;
+        width: 920px;
         -webkit-clip-path: rectangle(0px,500px,50px,0px);
       
       }
@@ -238,9 +296,9 @@
         #slideVal{
           position: relative;
           font-size: 2em;
-          margin-left: 15px;
+          float: right;
           margin-right: 15px;
-          top: -150px;
+          top: -120px;
     
         }
       }

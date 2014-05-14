@@ -1,5 +1,5 @@
-var width = 560,
-      height = 465,
+var width = 600,
+      height = 800,
       scale,
       trans=[0,0],
       centered;
@@ -37,43 +37,44 @@ var metric="absolute"
 
   
 d3.json("json/activityDat.json", function(error, data) {
-  
-    filterDat = data
     testingDat1 = data
     builds = buildSelects(data)
-
+    
     d3.json("json/lifeDates.json", function(error, dates) {
     
-  
     tempDates = dates
     minSlide = Math.min.apply(Math,tempDates.map(function(e){ return parseInt(e.Start)}))
     maxSlide = Math.max.apply(Math,tempDates.map(function(e){ return parseInt(e.Stop)}))
     $("#dateSlider").slider("option","min",minSlide)
     $("#dateSlider").slider("option","max",maxSlide)
-
-    graphingDat = buildGraphData(data)//,subLevel,type,options,otherOptions,color1)
+    
+    graphingDat = buildGraphData(testingDat1)//,subLevel,type,options,otherOptions,color1)
 
     elementChoose = ["#clockActivity","#barGraphCategory"]
     i=0
     
     data = $.extend([],graphingDat)
+
     var svg = d3.select(elementChoose[i]).append("svg")
         .attr("width", width)
-        .attr("height", 750)
-        .attr("viewBox","-230 200 600 600").attr("width",1000)
+        .attr("height", height)
+        .attr("viewBox","-350 120 800 800").attr("width",1000)
+
       .append("g")
         //.attr("transform", "translate(230,-190)")// rotate("+((15*i)+7.5)+" 0,960)"; })
         .attr("class","stateWrapper")
         
-    svg.selectAll("image").data(["/images/dayNightCyc.png"]).enter().append("svg:image")
-     .attr("transform", "translate(-68,533)")// rotate("+((15*i)+7.5)+" 0,960)"; })
-     .attr('width', 135)
-     .attr('height', 135)
-     .attr("xlink:href","/images/dayNightCyc.png")
+    svg.selectAll("image").data(["/images/24hourClock_Full.png"]).enter().append("svg:image")
+     .attr("transform", "translate(-90,510)")// rotate("+((15*i)+7.5)+" 0,960)"; })
+    /* .attr('width', 135)
+     .attr('height', 135)*/
+      .attr('width', 180)
+     .attr('height', 180)
+     .attr("xlink:href","/images/24HourClock_Full.png")
       
      margin = {top: 0, right: 0, bottom: 0, left: 0},
-        width = 600 - margin.left - margin.right,
-        height = 600 - margin.top - margin.bottom;
+        width = width- margin.left - margin.right,
+        height = height - margin.top - margin.bottom;
     
       x = d3.scale.ordinal()
         .rangeRoundBands([0, width], .1);
@@ -101,9 +102,23 @@ d3.json("json/activityDat.json", function(error, data) {
 
       index=0
       
+      didActivities = []
+      data.forEach(function(d){
+        options.forEach(function(e){
+          if(d[e].length>0){
+            didActivities.push(e)
+          }
+        })
+      })
+      
+      options = builds
+      
       data.forEach(function(d) {
         var y0 = 0;
         d.ages = color.domain().map(function(name) { return {name: name, people: d[name], y0: y0, y1: (options.indexOf(name)>-1 ? y0 += 3:  y0), rotateAngle: (index*15)}});
+        //d.ages = color.domain().map(function(name) { return {width: (Math.PI*2)/24, name: name, people: d[name], y0: y0, y1: (((occupation == "-Occupation-" && didActivities.indexOf(name)>-1) || (name==activity && singleName==false && occupation != "-Occupation-") || (singleName==true && d[name].length>0)) ? y0 += 3:  y0), rotateAngle: (index*15), percentage:0 }});
+
+        
         d.total = d.ages[d.ages.length - 1].y1;
         index = index+1
       });
@@ -150,7 +165,7 @@ d3.json("json/activityDat.json", function(error, data) {
           .data(options.slice().reverse())
         .enter().append("g")
           .attr("class", "legend")
-          .attr("transform", function(d, i) { return "translate(-350," + ((i * 20) + 350) +")"; });
+          .attr("transform", function(d, i) { return "translate(-335," + ((i * 20) + 300) +")"; });
     
       legend.append("rect")
           .attr("class","legendRect")
@@ -170,6 +185,7 @@ d3.json("json/activityDat.json", function(error, data) {
     
     plotBar([{letter: "A", score: 3}],"topBar")
     plotBar([{letter: "A", score: 3}],"botBar")
+    $("#preloader").css("display","none")
     $("#content").css("visibility","visible")
     $("#footer").fadeIn(0)
        
@@ -181,13 +197,14 @@ function updateGraphs(data,backButtonPressed){
     occupation = $("categorySelect").val()
     activity = $("activitySelect").val()
     
+    filterDat = data
     subLevel = occupation
     $("#searchPerson").val("")
     
     color= d3.scale.ordinal()
       .range(["#66c2a55", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854", "#ffd92f", "#e5c494", "#b3b3b3"]);
   
-    filterDat = data
+    //filterDat = data
     graphingDat = buildGraphData(data)//,subLevel,type,options,otherOptions,color)
     
     elementChoose = ["#clockActivity","#barGraphCategory"]
@@ -209,15 +226,27 @@ function updateGraphs(data,backButtonPressed){
     color.domain(d3.keys(data[0]).filter(function(key) { return key !== "TimeZone"; }));
     
     index=0
+    
+    didActivities = []
+    data.forEach(function(d){
+      options.forEach(function(e){
+        if(d[e].length>0){
+          didActivities.push(e)
+        }
+      })
+    })
  
     data.forEach(function(d) {
       var y0 = 0; 
-      d.ages = color.domain().map(function(name) { return {width: (Math.PI*2)/24, name: name, people: d[name], y0: y0, y1: (((occupation == "-Occupation-" && options.indexOf(name)>-1) || (name==activity && singleName==false && occupation != "-Occupation-") || (singleName==true && d[name].length>0)) ? y0 += 3:  y0), rotateAngle: (index*15), percentage:0 }}); //(options.indexOf(name)>-1 ? y0 += 3:  y0)  options.indexOf(name)>-1
+     //d.ages = color.domain().map(function(name) { return {width: (Math.PI*2)/24, name: name, people: d[name], y0: y0, y1: (((occupation == "-Occupation-" && options.indexOf(name)>-1) || (name==activity && singleName==false && occupation != "-Occupation-") || (singleName==true && d[name].length>0)) ? y0 += 3:  y0), rotateAngle: (index*15), percentage:0 }}); //(options.indexOf(name)>-1 ? y0 += 3:  y0)  options.indexOf(name)>-1
+      d.ages = color.domain().map(function(name) { return {width: (Math.PI*2)/24, name: name, people: d[name], y0: y0, y1: (((occupation == "-Occupation-" && didActivities.indexOf(name)>-1) || (name==activity && singleName==false && occupation != "-Occupation-") || (singleName==true && d[name].length>0)) ? y0 += 3:  y0), rotateAngle: (index*15), percentage:0 }});
       
       if(d.ages[d.ages.length-1].y1==0) d.ages[d.ages.length-1].y1=3
       d.total = d.ages[d.ages.length - 1].y1;
       index = index+1
     });
+    
+    
 
 
     x.domain(data.map(function(d) { return d.TimeZone; }));
@@ -243,19 +272,12 @@ function updateGraphs(data,backButtonPressed){
   
     if(backButtonPressed){
      d3.select(elementChoose[i]).selectAll(".stateWrapper").transition().duration(400).delay(0)
-      .attr("transform","translate(-450,0)")
+      .attr("transform","translate(-580,0)")
       }
              
     //get selected activities(to restrict the legend)
     
-    didActivities = []
-    data.forEach(function(d){
-      options.forEach(function(e){
-        if(d[e].length>0){
-          didActivities.push(e)
-        }
-      })
-    })
+
         
     didActivities = _.uniq(didActivities)
     
@@ -264,18 +286,18 @@ function updateGraphs(data,backButtonPressed){
       //$("#rightSideDisplay").css("opacity",0)
     }else{
      // d3.select(elementChoose[i]).select("svg").transition().duration(300).attr("viewBox","0 30 650 650").attr("width",width)
-      d3.select(elementChoose[i]).select("svg").transition().duration(300).attr("viewBox","-230 200 600 600").attr("width",width)        
+      d3.select(elementChoose[i]).select("svg").transition().duration(300).attr("viewBox","-330 210 750 750").attr("width",width)        
 
       $("#rightSideDisplay").css("opacity",1)
       $("#rightSideDisplay").css("width","100%")
-      $("#chosen").css("width", "300px");
+      /*$("#chosen").css("width", "300px");*/
       $("#clockActivity").css("width","550px")
 
       }
     divideTotal = 3
     state =  d3.select(elementChoose[i]).selectAll(".state")
       .data(data).selectAll("path")
-      .data(function(d){ return d.path}).transition().delay(200)  //attr("transform", function(d, i) { return "translate(" + "480" + ",-580) rotate("+((d.ages[d.ages.length-1].rotateAngle)+7.5)+" 0,960)"; })
+      .data(function(d){ return d.path}).transition().duration(500).delay(200)  //attr("transform", function(d, i) { return "translate(" + "480" + ",-580) rotate("+((d.ages[d.ages.length-1].rotateAngle)+7.5)+" 0,960)"; })
         .attr("d",function(d){ return d.path})
         .style("fill", function(d) { return convertColor(color(d.name),d.people.length,d3.max(data, function(d) { return d.total; })); })
         .style("fill-opacity", function(d) {return (d.people.length/Math.max((maxObj[d.name]==undefined)? 0:maxObj[d.name],1)) })
@@ -296,7 +318,7 @@ function updateGraphs(data,backButtonPressed){
           .data(didActivities.slice().reverse())
         .enter().append("g")
           .attr("class", "legend")
-          .attr("transform", function(d, i) { return "translate(-350," + ((i * 20) + 350) +")"; });
+          .attr("transform", function(d, i) { return "translate(-335," + ((i * 20) + 300) +")"; });
     
       legend.append("rect")
           .attr("class","legendRect")
@@ -313,12 +335,16 @@ function updateGraphs(data,backButtonPressed){
           .style("text-anchor", "start")
           .text(function(d) { return d; });
     }
+    
+
   
 
     updateLineGraph(testingDat1,occupation)
+
     
     $(".barGraphWrapper").css("visibility","visible")
     createBarGraphs(testingDat1,filterDat,activity,occupation)
+
       
 }
 

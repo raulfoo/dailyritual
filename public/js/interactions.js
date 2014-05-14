@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  
   $("#searchPerson").keyup(function(e){
     search = $(this).val()
     regSearch=RegExp(search,"i")
@@ -149,7 +150,7 @@ function buildSelects(data){
   
   builds.forEach(function(dat){
     if(index==0){
-      output = "<option value='"+topOptions[index]+"'>"+"Thinkers"+"</option>"
+      output = "<option value='"+topOptions[index]+"'>"+"Thinkers (All)"+"</option>"
     }else{
       output = ""
     }
@@ -159,14 +160,16 @@ function buildSelects(data){
     })
     elementID = ["#categorySelect","#activitySelect"][index]
     index +=1
+   
     $(elementID).html(output)
 
   })
+  
+  return categories
 }
 
 function buildGraphData(data){//,pickType,subLevel,options,otherOptions,color){
     
- 
   showKind = $("#categorySelect").val()
   type="Category"
   if(showKind =="-Occupation-") {
@@ -462,28 +465,36 @@ searchNamesFunc = function(d){
     $("#activitySelect")
       .val(d.name)
       .trigger('change')
+  }else if($("#categorySelect").val()=="-Occupation-"){
+    searchMultipleName("All",d.name)
   }else{
     searchMultipleName(d.people)
   }
 }
 
-searchMultipleName = function(searchName){
-
+searchMultipleName = function(searchName,categoryInput){
+    categoryInput = categoryInput || null
     allNames = []
-   
+    categories = []
     tempDat = testingDat1.filter(function(e) {
-     if(searchName.indexOf(e.Name)>-1){
+     if(searchName.indexOf(e.Name)>-1 || (searchName=="All" && e.Category==categoryInput)){
         allNames.push(e.Name)
+        categories.push(e.Category)
         return e.Name
      }
     })
+    
+    categories = _.uniq(categories)
     
     subLevel=tempDat[0].Category
     
     type = "Category"
     $("#holdDropType").val(type)
     $("#holdDropValue").val(tempDat[0].Category)
-    $("#categorySelect").find("[name="+tempDat[0].Category+"]").attr("selected","selected")
+    
+    categoryChoose = (categories.length>1) ? "-Occupation-" : categories[0]
+    
+    $("#categorySelect").find("[name="+ categoryChoose+"]").attr("selected","selected")
     
    
     allNames = _.uniq(allNames)
@@ -522,9 +533,11 @@ searchMultipleName = function(searchName){
     $("#searchTableDropDown").html("")
     
     $("#backLevel a").text("View all "+$("#categorySelect option:selected").text())
-     $("#backLevel").animate({"opacity": 1},"fast",function(){
-      $("#backLevel").css("visibility","visible")
-    })
+    if(searchName != "All"){
+      $("#backLevel").animate({"opacity": 1},"fast",function(){
+        $("#backLevel").css("visibility","visible")
+      })
+    }
     updateGraphs(tempDat)
   
 }

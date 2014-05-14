@@ -82,8 +82,8 @@ function createBarGraphs(occupationDat,activityDat,activity,occupation){
 
 plotBar = function(barData,svgName){
 
-  var margin = {top: 20, right: 20, bottom: 80, left: 40},
-      width = 0 - margin.left - margin.right,
+  var margin = {top: 40, right: 20, bottom: 80, left: 40},
+      width = 400 - margin.left - margin.right,
       height = 200 - margin.top - margin.bottom;
   
   var x = d3.scale.ordinal()
@@ -121,7 +121,9 @@ plotBar = function(barData,svgName){
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.score); })
       .attr("height", function(d) { return height - y(d.score); })
-      .attr("fill", function(d) { return ((d.letter=="Selection") ? "green" : "steelblue")})
+      .attr("fill", function(d) { return ((d.letter=="Selection") ? "green" :  (svgName==".botBar")? convertColor(color(d.letter),1,1) : "grey")})  
+      .on("mouseover", $("#filterInstruction").css("display","inline"))
+      .on("mouseout", $("#filterInstruction").css("display","none"))
       
   svg.append("g")
       .attr("class", "x axis")
@@ -146,9 +148,9 @@ plotBar = function(barData,svgName){
   
   svg.append("g").attr("class","chartTitle").append("text")
     .attr("x", (width / 2))             
-      .attr("y", -5)
+      .attr("y", -20)
       .attr("text-anchor", "middle")  
-      .style("font-size", "16px") 
+      .style("font-size", "20px") 
       .style("text-decoration", "underline")  
       .text(titleText);
   
@@ -162,7 +164,7 @@ plotBar = function(barData,svgName){
 
 function updateBar(barData,svgName){
 
-  var margin = {top: 20, right: 20, bottom: 80, left: 40},
+  var margin = {top: 40, right: 20, bottom: 80, left: 40},
       width = 400 - margin.left - margin.right,
       height = 200 - margin.top - margin.bottom;
   
@@ -204,23 +206,29 @@ function updateBar(barData,svgName){
             .trigger('change')
           }
       })
-      .on("mouseover", function(){ d3.select(this).style("stroke","#d3d3d3") })
-      .on("mouseout", function(){ d3.select(this).style("stroke","black")  })
+      .on("mouseover", function(){ d3.select(this).style("stroke","#d3d3d3") 
+         $("#filterInstruction").css("display","inline")
+      })
+      .on("mouseout", function(){ 
+        d3.select(this).style("stroke","black") 
+        $("#filterInstruction").css("display","none")
+      })
+      
+      
     .transition().duration(500)
     .attr("class", "bar")
     .attr("x", function(d) { return x(d.letter); })
     .attr("width", x.rangeBand())
     .attr("y", function(d) { return y(d.score); })
     .attr("height", function(d) { return height - y(d.score); })
-    .attr("fill", function(d){ return ((d.letter=="Selection") ? "green" : "steelblue")})
- 
-    
+    .attr("fill", function(d){ return ((d.letter=="Selection") ? "green" :   (svgName==".botBar")? convertColor(color(d.letter),1,1) : "grey")}) 
+
 
   bars.attr("x", function(d) { return x(d.letter) }).transition().duration(500)
     .attr("width", x.rangeBand())
     .attr("y", function(d) { return y(d.score); })
     .attr("height", function(d) { return height - y(d.score); })
-    .attr("fill", function(d){ return ((d.letter=="Selection") ? "green" : "steelblue")})
+    .attr("fill", function(d){ return ((d.letter=="Selection") ? "green" :  (svgName==".botBar")? convertColor(color(d.letter),1,1) : "grey")})
     
 
   bars.exit().transition().remove();
@@ -243,9 +251,9 @@ function updateBar(barData,svgName){
     
   svg.selectAll(".chartTitle").selectAll("text")
     .attr("x", (width / 2))             
-      .attr("y", -5)
+      .attr("y", -20)
       .attr("text-anchor", "middle")  
-      .style("font-size", "16px") 
+      .style("font-size", "20px") 
       .style("text-decoration", "underline")  
       .text(titleText);
    

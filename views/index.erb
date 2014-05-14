@@ -15,7 +15,8 @@
       'js/timeSeries.js',
       'js/mouseover.js',
       'js/bargraph.js',
-      'js/lineGraph.js'
+      'js/lineGraph.js',
+      'js/addThis.js'
     ].forEach(function(src) {
       var script = document.createElement('script');
       script.src = src;
@@ -52,10 +53,10 @@
     
     </select>
     <span>?</span>
-    <div id="searchPersonDiv">
+   <!-- <div id="searchPersonDiv">
       <input type="text" id="searchPerson" name="person" placeholder="Search By Name"/>
       <table id="searchTableDropDown"></table>
-    </div>
+    </div>-->
   </div>
 
  
@@ -73,14 +74,22 @@
     <div id="leftSideDisplay">  
       <div id="clockActivity"></div>
       <div id="clockImg">
+      <p id="filterInstruction"> Click to Filter Data by this Selection</p>
+
+    
         <!--<img src="images/dayNightCycleSmall.png"/>-->
       </div>
       <div id="backLevel"><a class="button">Back</a></div>
+      <div><a class="button" id="resetButton">Show Data for All Years</a></div>
 
     </div>
   
     <div id="rightSideDisplay">
       <div id="chosenWrapper">
+        <div id="searchPersonDiv">
+          <span>Now Showing:</span><input type="text" id="searchPerson" name="person" placeholder="Search By Name"/>
+          <table id="searchTableDropDown"></table>
+        </div>
         <div id="chosen"></div>
       </div>
       <div class="barGraphWrapper"></div>
@@ -109,13 +118,13 @@
       <div id="slideOptions">
         <span id="slideVal"></span>
         <span id="numberMatches"></span>
-        <a class="button" id="resetButton">Reset</a>
       </div>
     </div>
     <div id="timeSeriesNames"></div>
   </div>
 
 </div>
+
 
 
 

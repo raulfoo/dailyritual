@@ -19,22 +19,28 @@
 
 
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-   <!-- <script type="text/javascript">
-      google.load("visualization", "1", {packages: ["corechart"]});
-     </script>-->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5140bf9f58fef462"></script>
+
     <%= yield_content :head %>
-    <%#= erb :google_analytics if production? %>
-   
+    <%= erb :google_analytics if production? %>
+    
   </head>
   <body>
     <div class="container">
+      <!--<div id="preloader">
+        <img src="/images/preloader.gif"/>
+      </div>-->
       <div id="content">
         <%= yield %>
-      </div>      
+      </div>     
+      
+      <%#= erb :add_this%>
+
       <div id="footer">
         <div class="copyright">
           Data Gathered from <u>Daily Rituals: How Artists Work</u> by <a href="http://masoncurrey.com/Daily-Rituals">Mason Currey</a><br>
-          Visualization: <a href="mailto:rfcima@gmail.com">Rosie Cima</a> and <a href="mailto:raulfoo@gmail.com">Chris Fedor</a> 
+          Visualization by <a href="mailto:rfcima@gmail.com">Rosie Cima</a> and <a href="mailto:raulfoo@gmail.com">Chris Fedor</a> <br>
+          Built with <a href="http://d3.js">d3.js</a> 
         </div>
       </div>
     </div>

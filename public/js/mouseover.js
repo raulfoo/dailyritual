@@ -66,9 +66,11 @@ function mover(d,obj,clock) {
     
     popLeft = popLeft+leftChange
     popTop = popTop+topChange
+    
   
     $("#pop-up").css({"left":popLeft,"top":popTop});
     if(progDisplay.length>0){
+      $("#filterInstruction").css("display","inline")
       $("#pop-up").fadeIn(0);
     }
   });
@@ -80,6 +82,9 @@ function mout(d,obj) {
    d3.select(obj).style({'stroke-width':'1px','stroke':'black'})
    $(".description").css("visibility","hidden")
    $("#pop-up").fadeOut(0);
+   
+   $("#filterInstruction").css("display","none")
+
   
  
 }

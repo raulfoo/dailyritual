@@ -1,5 +1,5 @@
 buildTimeSeries = function(data){
-  var margin = {top: 20, right: 20, bottom: 30, left: 50},
+  var margin = {top: 20, right: 0, bottom: 30, left: 40},
       width = 960 - margin.left - margin.right,
       height = 80 - margin.top - margin.bottom;
   
@@ -157,7 +157,7 @@ buildTimeSeries = function(data){
 updateTimeSeries = function(data){
 
 
-  var margin = {top: 20, right: 20, bottom: 30, left: 50},
+  var margin = {top: 20, right: 0, bottom: 30, left: 40},
       width = 960 - margin.left - margin.right,
       height = 80 - margin.top - margin.bottom;
   
@@ -282,6 +282,8 @@ updateTimeSeries = function(data){
         $("#holdDropType").val("Category")
         searchMultipleName(d.people)
         $("#dateSlider").slider("value",d.year)
+        $("#resetButton").css("visibility","visible")
+
 
   }
 
