@@ -2,15 +2,9 @@ require "bundler/setup"
 require "pathological"
 require "sinatra/base"
 require "sinatra/reloader"
-#require "coffee-script"
 require "sinatra/content_for2"
 require "rack-flash"
-#require "opengraph"
-#require "open-uri"
 require "json"
-#require "lib/db"
-#require "lib/currency"
-#require "lib/mapping"
 
 
 
@@ -33,11 +27,7 @@ class DailyRitual < Sinatra::Base
   end
   
   before do
-    #@sortingFunction = UniqueSearch.filter(:first_browse => "nested").sort_by(&:browse_name).uniq
-    #@sortingAgency =  UniqueSearch.filter(:first_browse => "unested").sort_by(&:browse_name).uniq
-    #@text_search = UniqueSearch.filter(:search_text => true)
-    #@map_list= MapRange.select(:agency, :agency_id).sort_by(&:agency).uniq
-    #@gdp = EconomySize.all
+  
   end
   
   configure do
@@ -59,9 +49,5 @@ class DailyRitual < Sinatra::Base
 
   def production?() ENV["RACK_ENV"] == "production" end
   
-  #def enforce_required_params(fields)
-  #  empty_fields = fields.select { |field| params[field].nil? || params[field].empty? }
-  #  empty_fields.empty? ? [] : ["At least one search ingredient is required!"]
-  #end
 
 end
