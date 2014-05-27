@@ -42,9 +42,10 @@ $(document).ready(function(){
          
           updateGraphs(yearDat)
           
-          $("#backLevel a").text("View all "+$("#categorySelect").val().toLowerCase()+"s")
-          $("#backLevel").fadeIn()
-
+          $("#backLevel a").text("View all "+$("#categorySelect option:selected").text())
+          $("#backLevel").animate({"opacity": 1},"fast", function(){
+             $("#backLevel").css("visibility","visible")
+          })
          // $("#chosen").html(subLevel)
         }
       }
